@@ -9,15 +9,14 @@ typedef struct child
 	int key;
 	int pkey;
 	size_t len;
-	char* info;
+	long offset;
 } child;
 
-child* create_child(const int key, const int pkey, char* info);
+child* create_child(FILE* f, const int key, const int pkey, const char* info);
 
 void* create_empty_child(void);
-void dealloc_child(void* ptr);
 
-void print_child(const void* ptr);
+void print_child(FILE* f, const void* ptr);
 bool read_child(FILE* in, void* ptr);
 void save_child(FILE* out, const void* ptr);
 

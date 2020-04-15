@@ -8,15 +8,16 @@ typedef struct parent
 {
 	int key;
 	size_t len;
-	char* info;
+	long offset;
 } parent;
 
-parent* create_parent(const int key, char* info);
+struct FILE;
+
+parent* create_parent(FILE* f, const int key, char* info);
 
 void* create_empty_parent(void);
-void dealloc_parent(void* ptr);
 
-void print_parent(const void* ptr);
+void print_parent(FILE* f, const void* ptr);
 bool read_parent(FILE* in, void* ptr);
 void save_parent(FILE* out, const void* ptr);
 

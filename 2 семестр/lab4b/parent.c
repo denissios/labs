@@ -4,65 +4,53 @@
 #include <stdlib.h>
 #include <string.h>
 
-parent* create_parent(const int key, char* info)
+parent* create_parent(FILE* f, const int key, char* info)
 {
+
 	parent* ptr = (parent*)malloc(sizeof(parent));
 	if (!ptr)
 		return NULL;
 
 	ptr->key = key;
 	ptr->len = info ? strlen(info) : 0;
-	ptr->info = info;
+
+	fseek(f, 0, SEEK_END);
+	ptr->offset = info? ftell(f) : 0;
+
+	if (info)
+		fwrite(info, sizeof(char), ptr->len, f);
+	
+	free(info);
 
 	return ptr;
 }
 
 void* create_empty_parent(void)
 {
-	parent* ptr = (parent*)malloc(sizeof(parent));
-	if (!ptr)
-		return NULL;
-
-	ptr->key = 0;
-	ptr->len = 0;
-	ptr->info = NULL;
-
-	return (void*)ptr;
+	return calloc(1, sizeof(parent));
 }
 
-void dealloc_parent(void* ptr)
+void print_parent(FILE* f, const void* ptr) 
 {
-	free(HT_TPC(parent, ptr)->info);
-	free(ptr);
-}
+	fseek(f, HT_TCPC(parent, ptr)->offset, SEEK_SET);
 
-void print_parent(const void* ptr)
-{
-	printf_s("|%5d|%10s|\n", HT_TCPC(parent, ptr)->key, HT_TCPC(parent, ptr)->info);
+	char* buf = (char*)calloc(HT_TCPC(parent, ptr)->len + 1, sizeof(char));
+	if (!buf)
+		return;
+
+	fread((void*)buf, sizeof(char), HT_TCPC(parent, ptr)->len, f);
+
+	printf("|%5d|%10s|\n", HT_TCPC(parent, ptr)->key, buf);
+	free(buf);
 }
 
 bool read_parent(FILE* in, void* ptr)
 {
-	if (!ptr ||
-		fread(&HT_TPC(parent, ptr)->key, sizeof(int), 1, in) != 1 ||
-		fread(&HT_TPC(parent, ptr)->len, sizeof(size_t), 1, in) != 1)
-		return false;
-
-	HT_TPC(parent, ptr)->info = (char*)calloc(HT_TPC(parent, ptr)->len + 1, sizeof(char));
-	if (!HT_TPC(parent, ptr)->info ||
-		fread(HT_TPC(parent, ptr)->info, sizeof(char), HT_TPC(parent, ptr)->len, in) != HT_TPC(parent, ptr)->len)
-	{
-		free(HT_TPC(parent, ptr)->info);
-
-		return false;
-	}
-
-	return true;
+	return !(!ptr || fread(ptr, sizeof(parent), 1, in) != 1 || HT_TCPC(parent, ptr)->offset == 0);
 }
 
 void save_parent(FILE* out, const void* ptr)
 {
-	fwrite(&HT_TCPC(parent, ptr)->key, sizeof(int), 1, out);
-	fwrite(&HT_TCPC(parent, ptr)->len, sizeof(size_t), 1, out);
-	fwrite(HT_TCPC(parent, ptr)->info, sizeof(char), HT_TCPC(parent, ptr)->len, out);
+	static const parent p = { 0, 0, 0 };
+	fwrite(ptr? ptr : &p, sizeof(parent), 1, out);
 }

@@ -4,12 +4,13 @@
 #include "util.h"
 
 #include <stdlib.h>
+#include <string.h>
 
 #define OPTS_NUM 4
 
 typedef void (*opt_t)(ht_item*, ht_item*);
 
-const opt_t OPTS[OPTS_NUM] =
+static const opt_t OPTS[OPTS_NUM] =
 {
 	&add_parent,
 	&add_child,
@@ -17,7 +18,7 @@ const opt_t OPTS[OPTS_NUM] =
 	&print_content
 };
 
-const char* OPTS_MSGS[OPTS_NUM] =
+static const char* OPTS_MSGS[OPTS_NUM] =
 {
 	{ "Add parent" },
 	{ "Add child" },
@@ -25,8 +26,7 @@ const char* OPTS_MSGS[OPTS_NUM] =
 	{ "Print content" }
 };
 
-extern FILE* Parent_db;
-extern FILE* Child_db;
+extern FILE* DB;
 
 void add_parent(ht_item* parent_ht, ht_item* child_ht)
 {
@@ -45,16 +45,13 @@ void add_parent(ht_item* parent_ht, ht_item* child_ht)
 	printf("Info: ");
 	char* info = get_str();
 
-	parent* ptr = create_parent(key, info);
-
+	parent* ptr = create_parent(DB, key, info);
 	if (!ht_item_add(parent_ht, ptr->key, (void*)ptr))
 	{
 		free(ptr);
 
 		printf("[ERROR] Cannot add parent\n");
 	}
-	else
-		save_parent(Parent_db, ptr);
 }
 
 void add_child(ht_item* parent_ht, ht_item* child_ht)
@@ -82,15 +79,13 @@ void add_child(ht_item* parent_ht, ht_item* child_ht)
 	printf_s("Info: ");
 	char* info = get_str();
 
-	child* ptr = create_child(key, pkey, info);
+	child* ptr = create_child(DB, key, pkey, info);
 	if (!ht_item_add(child_ht, ptr->key, (void*)ptr))
 	{
 		free(ptr);
 
 		printf("[ERROR] Cannot add child\n");
 	}
-	else
-		save_child(Child_db, ptr);
 }
 
 void remove_parent(ht_item* parent_ht, ht_item* child_ht)
@@ -105,17 +100,19 @@ void remove_parent(ht_item* parent_ht, ht_item* child_ht)
 		return;
 	}
 
-	if (!ht_item_delete(parent_ht, key, dealloc_parent))
+	if (!ht_item_delete(parent_ht, key))
 		printf_s("[ERROR] Cannot delete parent(he does not exists)\n");
 }
 
 void print_content(ht_item* parent_ht, ht_item* child_ht)
 {
 	printf_s("\nPARENTS TABLE\n");
-	ht_print(parent_ht, print_parent);
+	printf_s("| KEY |   INFO   |\n");
+	ht_print(DB, parent_ht, print_parent);
 
 	printf_s("\nCHILDREN TABLE\n");
-	ht_print(child_ht, print_child);
+	printf_s("| KEY | PKEY |   INFO   |\n");
+	ht_print(DB, child_ht, print_child);
 
 	printf_s("\n");
 }

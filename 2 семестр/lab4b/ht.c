@@ -3,6 +3,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+inline size_t ht_get_hash(const int key)
+{
+	return key % HT_SIZE;
+}
+
+inline size_t ht_get_next(const size_t idx)
+{
+	return (idx + 1) % HT_SIZE;
+}
+
 bool ht_item_add(ht_item* ht, const int key, void* value)
 {
 	size_t hash = ht_get_hash(key);
@@ -43,7 +53,7 @@ void* ht_item_read(ht_item* ht, const int key)
 	return NULL;
 }
 
-bool ht_item_delete(ht_item* ht, const int key, dealloc_func_t dealloc)
+bool ht_item_delete(ht_item* ht, const int key)
 {
 	size_t hash = ht_get_hash(key);
 	size_t i = hash;
@@ -53,7 +63,7 @@ bool ht_item_delete(ht_item* ht, const int key, dealloc_func_t dealloc)
 			return false;
 		else if (ht[i].key == key)
 		{
-			dealloc(ht[i].value);
+			free(ht[i].value);
 
 			ht[i].value = NULL;
 
@@ -72,23 +82,22 @@ inline void ht_alloc(ht_item** ht)
 		*ht = (ht_item*)calloc(HT_SIZE, sizeof(ht_item));
 }
 
-void ht_dealloc(ht_item* ht, dealloc_func_t dealloc)
+void ht_dealloc(ht_item* ht)
 {
 	if (!ht)
 		return;
 
 	for (size_t i = 0; i < HT_SIZE; ++i)
-		if (ht[i].value)
-			dealloc(ht[i].value);
+		free(ht[i].value);
 
 	free(ht);
 }
 
-void ht_print(const ht_item* ht, print_func_t print)
+void ht_print(FILE* f, const ht_item* ht, print_func_t print)
 {
 	for (size_t i = 0; i < HT_SIZE; ++i)
 		if (ht[i].value)
-			print(ht[i].value);
+			print(f, ht[i].value);
 }
 
 bool ht_load(FILE* in, ht_item** ht, create_func_t create, read_func_t read, get_key_func_t get_key)
@@ -100,8 +109,7 @@ bool ht_load(FILE* in, ht_item** ht, create_func_t create, read_func_t read, get
 	if (!ht || !*ht)
 		return false;
 
-	fseek(in, 0, SEEK_SET);
-	for (size_t i = 0; !feof(in) && i < HT_SIZE; ++i)
+	for (size_t i = 0; i < HT_SIZE; ++i)
 	{
 		void* ptr = create();
 
@@ -109,7 +117,7 @@ bool ht_load(FILE* in, ht_item** ht, create_func_t create, read_func_t read, get
 		{
 			free(ptr);
 
-			break;
+			continue;
 		}
 
 		ht_item_add(*ht, get_key(ptr), ptr);
@@ -123,8 +131,6 @@ void ht_save(FILE* out, ht_item* ht, save_func_t save)
 	if (!out)
 		return;
 
-	fseek(out, 0, SEEK_SET);
 	for (size_t i = 0; i < HT_SIZE; ++i)
-		if (ht[i].value)
-			save(out, ht[i].value);
+		save(out, ht[i].value);
 }
