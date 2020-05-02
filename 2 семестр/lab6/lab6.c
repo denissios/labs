@@ -11,6 +11,7 @@
 typedef struct node
 {
     int val;
+    struct vertex* vertex;
     struct node* next;
 } node;
 
@@ -130,7 +131,7 @@ void dialog(int x, Graph* graph)
 void timing()
 {
     Graph* y = (Graph*)calloc(1, sizeof(Graph));
-    size_t cnt1 = 1000, cnt2 = cnt1, n = 14;
+    size_t cnt1 = 1000, cnt2 = cnt1, n = 16;
     while (n--)
     {
         size_t count_vertex = cnt2;
@@ -153,7 +154,7 @@ void timing()
         first = clock();
         find_connected(y, rand() % count_vertex, false);
         last = clock();
-        if (last - first < 4)
+        if (last - first < 3)
         {
             vertex* ptr = y->vert_list.next;
             while (ptr)
@@ -167,7 +168,7 @@ void timing()
             continue;
         }
         
-        printf("Test number %u\n", 14 - n);
+        printf("Test number %u\n", 16 - n);
         printf("Count of vertices: %u\n", count_vertex);
         printf("Count of edges: %u\n", 2 * count_vertex);
         printf("Time = %d\n", last - first);
@@ -218,7 +219,7 @@ void dfs(Graph* g, bool used[], vertex* cur)
     node* ptr = cur->adj_list.next;
     while (ptr)
     {
-        dfs(g, used, get_by_id(g, ptr->val));
+        dfs(g, used, ptr->vertex);
         ptr = ptr->next;
     }
 }
@@ -274,6 +275,7 @@ bool add_adj(vertex* a, vertex* b, bool flag1, bool flag2)
 
     node_ptr->next = calloc(1, sizeof(node));
     node_ptr->next->val = b->vertex;
+    node_ptr->next->vertex = b;
     return true;
 }
 
@@ -327,6 +329,7 @@ void delete_vertex(Graph* x, int id)
 
     node* node_ptr = ptr->adj_list.next;
     while (node_ptr)
+
     {
         if (node_ptr->val != id)
             remove_adj(x, node_ptr->val, ptr->vertex);
