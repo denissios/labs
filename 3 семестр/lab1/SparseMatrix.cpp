@@ -83,7 +83,7 @@ void SparseMatrix::SetMatrix()
 				val = val_push_back(val, matrix[i][j]);
 			}
 			if (j == n - 1 && all_row_null)
-				row_ptr[i] = -1;                        // -1 if all row includes 0
+				row_ptr[i] = -1;                        // -1 if this all row includes 0
 		}
 	}
 }
