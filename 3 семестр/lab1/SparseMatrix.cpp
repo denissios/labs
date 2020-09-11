@@ -53,7 +53,7 @@ void SparseMatrix::PrintMatrix()
 			std::cout << val[j] << " ";
 			k++;
 
-			if (j + 1 == row_ptr[row_count + 1])
+			if (j + 1 == row_ptr[row_count + 1] || j + 1 == size_val)
 			{
 				while (k < n)
 				{
