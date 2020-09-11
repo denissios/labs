@@ -4,9 +4,6 @@ SparseMatrix::SparseMatrix(int m, int n)
 {
 	this->m = m;
 	this->n = n;
-	matrix = new int* [m];
-	for (size_t i = 0; i < m; i++)
-		matrix[i] = new int[n];
 
 	MyVector = new int[m];
 	row_ptr = new int[m];
@@ -14,13 +11,9 @@ SparseMatrix::SparseMatrix(int m, int n)
 
 SparseMatrix::~SparseMatrix()
 {
-	for (size_t i = 0; i < m; i++)
-	{
-		delete[] matrix[i];
-	}
-	delete[] matrix;
 	delete[] val;
 	delete[] row_ptr;
+	delete[] ptr_col;
 	delete[] MyVector;
 }
 
@@ -33,13 +26,67 @@ void SparseMatrix::PrintMatrix()
 		return;
 	}
 
-	for (size_t i = 0; i < m; i++)
+	for (size_t i = 0, j = 0, row_count = 0; i < m; i++)
 	{
-		for (size_t j = 0; j < n; j++)
+		size_t k = 0;
+
+		if (row_ptr[row_count] == -1)
 		{
-			std::cout << matrix[i][j] << " ";
+			for (size_t z = 0; z < n; z++)
+			{
+				std::cout << "0 ";
+			}
+
+			std::cout << std::endl;
+			row_count++;
+			continue;
 		}
+
+		if (row_count == m - 1)
+		{
+			while (k != ptr_col[j])
+			{
+				std::cout << "0 ";
+				k++;
+			}
+
+			std::cout << val[j] << " ";
+			k++;
+
+			if (j + 1 == row_ptr[row_count + 1])
+			{
+				while (k < n)
+				{
+					std::cout << "0 ";
+					k++;
+				}
+				break;
+			}
+			j++;
+		}
+
+		while (j != size_val && j != row_ptr[row_count + 1])
+		{
+			while (k != ptr_col[j])
+			{
+				std::cout << "0 ";
+				k++;
+			}
+
+			std::cout << val[j] << " ";
+			k++;
+
+			if (j + 1 == row_ptr[row_count + 1] || j + 1 == size_val)
+				while (k < n)
+				{
+					std::cout << "0 ";
+					k++;
+				}
+			j++;
+		}
+
 		std::cout << std::endl;
+		row_count++;
 	}
 }
 
@@ -71,8 +118,9 @@ void SparseMatrix::SetMatrix()
 		std::cout << "Row number " << i << ": ";
 		for (size_t j = 0; j < n; j++)
 		{
-			matrix[i][j] = GetInt("Enter: ");
-			if (matrix[i][j])
+			int a;
+			a = GetInt("Enter: ");
+			if (a)
 			{
 				all_row_null = false;
 				if (!flag)
@@ -80,7 +128,8 @@ void SparseMatrix::SetMatrix()
 					row_ptr[i] = size_val;
 					flag = true;
 				}
-				val = val_push_back(val, matrix[i][j]);
+				val = val_push_back(val, a);
+				ptr_col = ptr_col_push_back(ptr_col, j);
 			}
 			if (j == n - 1 && all_row_null)
 				row_ptr[i] = -1;                        // -1 if this all row includes 0
@@ -98,6 +147,14 @@ void SparseMatrix::CreateVector()
 	for (size_t i = 0, j = 0, row_count = 0; i < m; i++)
 	{
 		int s1 = 0, s2 = 0;
+
+		if (row_ptr[row_count] == -1)
+		{
+			MyVector[i] = 0;
+			row_count++;
+			continue;
+		}
+
 		if (row_count == m - 1)
 		{
 			while (j != size_val)
@@ -108,13 +165,6 @@ void SparseMatrix::CreateVector()
 			}
 			MyVector[i] = s1 - s2;
 			break;
-		}
-
-		if (row_ptr[row_count] == -1)
-		{
-			MyVector[i] = 0;
-			row_count++;
-			continue;
 		}
 
 		while (j != size_val && j != row_ptr[row_count + 1])
@@ -148,4 +198,16 @@ int* SparseMatrix::val_push_back(int*& arr_val, const int element)
 	this->size_val++;
 	delete[] arr_val;
 	return val;
+}
+
+int* SparseMatrix::ptr_col_push_back(int*& arr_val, const int element)
+{
+	int* ptr_col = new int[size_ptr_col + 1];
+	for (size_t i = 0; i < size_ptr_col; i++)
+		ptr_col[i] = arr_val[i];
+
+	ptr_col[size_ptr_col] = element;
+	this->size_ptr_col++;
+	delete[] arr_val;
+	return ptr_col;
 }
