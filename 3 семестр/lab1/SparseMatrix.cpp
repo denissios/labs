@@ -2,6 +2,8 @@
 
 SparseMatrix::SparseMatrix(int m, int n)
 {
+	if (m < 0 || n < 0)
+		return;
 	this->m = m;
 	this->n = n;
 

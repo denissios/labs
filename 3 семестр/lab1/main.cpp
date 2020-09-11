@@ -7,8 +7,8 @@ int main()
 {
 	int m = 0, n = 0;
 
-	m = UGetInt("Enter m: ");
-	n = UGetInt("Enter n: ");
+	m = GetInt("Enter m: ");
+	n = GetInt("Enter n: ");
 
 	SparseMatrix MyMatrix(m, n);
 
