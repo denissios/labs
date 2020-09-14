@@ -9,8 +9,11 @@ TEST(nefroid_constructor, default_constructor) {
 }
 
 TEST(nefroid_constructor, other_constructor) {
-	nefroid Nefroid(5);
-	ASSERT_EQ(5, Nefroid.GetRadius());
+	nefroid Nefroid1(5);
+	ASSERT_EQ(5, Nefroid1.GetRadius());
+
+	nefroid Nefroid2(-1);
+	ASSERT_EQ(0, Nefroid2.GetRadius());
 }
 
 TEST(nefroid_constructor, Exception) {
@@ -20,8 +23,14 @@ TEST(nefroid_constructor, Exception) {
 
 TEST(nefroid_methods, setters) {
 	nefroid Nefroid;
+	Nefroid.SetRadius(-10);
+	ASSERT_EQ(0, Nefroid.GetRadius());
 	Nefroid.SetRadius(10);
 	ASSERT_EQ(10, Nefroid.GetRadius());
+	Nefroid.SetRadius(15);
+	ASSERT_EQ(15, Nefroid.GetRadius());
+	Nefroid.SetRadius(-5);
+	ASSERT_EQ(15, Nefroid.GetRadius());
 }
 
 TEST(nefroid_methods, length) {
@@ -47,12 +56,12 @@ TEST(nefroid_methods, get_xy) {
 
 TEST(nefroid_methods, equation_null) {
 	nefroid Nefroid;
-	ASSERT_STREQ("(x ^ 2 + y ^ 2) ^ 3 = 0", Nefroid.GetEquation());
+	ASSERT_EQ("(x ^ 2 + y ^ 2) ^ 3 = 0", Nefroid.GetEquation());
 }
 
 TEST(nefroid_methods, equation_not_null) {
 	nefroid Nefroid(2);
-	ASSERT_STREQ("(x ^ 2 + y ^ 2 - 16.00) ^ 3 = 1728.00 * y ^ 2", Nefroid.GetEquation());
+	ASSERT_EQ("(x ^ 2 + y ^ 2 - 16) ^ 3 = 1728 * y ^ 2", Nefroid.GetEquation());
 }
 
 int main(int argc, char* argv[])

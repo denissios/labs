@@ -7,12 +7,20 @@ nefroid::nefroid()
 
 nefroid::nefroid(double a)
 {
+	if (a < 0)
+	{
+		this->a = 0;
+		return;
+	}
 	this->a = a;
 }
 
-void nefroid::SetRadius(double a)
+bool nefroid::SetRadius(double a)
 {
+	if (a < 0)
+		return false;
 	this->a = a;
+	return true;
 }
 
 double nefroid::GetRadius()
@@ -45,27 +53,12 @@ double nefroid::Get_Y(double t)
 	return (4 * this->a * pow(sin(t * M_PI / 180), 3));
 }
 
-const char* nefroid::GetEquation()
+std::string nefroid::GetEquation()
 {
 	if (!this->a)
 		return "(x ^ 2 + y ^ 2) ^ 3 = 0";
 
-	const char* s1 = "(x ^ 2 + y ^ 2 - ) ^ 3 =  * y ^ 2";
-	size_t length = strlen(s1) + 1;
-
-	double a1 = 4 * pow(this->a, 2);
-	double a2 = 108 * pow(this->a, 4);
-
-	char num[20];
-
-	sprintf_s(num, 20, "%.2f", a1);
-	length += strlen(num);
-	sprintf_s(num, 20, "%.2f", a2);
-	length += strlen(num);
-
-	char* s = new char[length];
-
-	sprintf_s(s, length, "(x ^ 2 + y ^ 2 - %.2f) ^ 3 = %.2f * y ^ 2", a1, a2);
-
-	return s;
+	std::stringstream ss;
+	ss << "(x ^ 2 + y ^ 2 - " << 4 * pow(this->a, 2) << ") ^ 3 = " << 108 * pow(this->a, 4) << " * y ^ 2";
+	return ss.str();
 }

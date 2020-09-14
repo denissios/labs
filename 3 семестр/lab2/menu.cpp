@@ -52,12 +52,12 @@ void SetRadius(nefroid &Nefroid)
 {
 	double radius = 0;
 	radius = GetNumber<double>("Enter radius: ");
-	if (radius < 0)
+	if (!Nefroid.SetRadius(radius))
 	{
 		std::cout << "Radius must be > 0!" << std::endl << std::endl;
 		return;
 	}
-	Nefroid.SetRadius(radius);
+
 	std::cout << std::endl;
 }
 
@@ -92,9 +92,5 @@ void Get_XY(nefroid &Nefroid)
 
 void GetEquation(nefroid &Nefroid)
 {
-	const char* s = Nefroid.GetEquation();
-	std::cout << s << std::endl << std::endl;
-	if (!Nefroid.GetRadius())
-		return;
-	delete[] s;
+	std::cout << Nefroid.GetEquation() << std::endl << std::endl;
 }
