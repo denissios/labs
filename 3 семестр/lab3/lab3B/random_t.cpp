@@ -5,6 +5,7 @@
 random_t::random_t()
 {
 	this->length = 0;
+	this->arr = nullptr;
 }
 
 random_t::random_t(int length)
@@ -12,29 +13,47 @@ random_t::random_t(int length)
 	this->SetSampleByLength(length);
 }
 
-random_t::random_t(int length, float* arr)
+random_t::random_t(int length, float*& arr)
 {
 	this->SetSampleByArray(length, arr);
 }
 
+random_t::random_t(random_t& other)
+{
+	this->length = other.length;
+	this->arr = new float[other.length];
+	for (size_t i = 0; i < other.length; i++) {
+		this->arr[i] = other.arr[i];
+	}
+}
+
+random_t::~random_t()
+{
+	delete[] arr;
+}
+
 void random_t::SetSampleByLength(int length)
 {
-	if (length < 0 || length > 100) {
+	if (length < 0) {
 		throw length;
 	}
-	srand(time(NULL));
+
 	this->length = length;
+	this->arr = new float[length];
+	srand(time(NULL));
 	for (size_t i = 0; i < length; i++) {
 		this->arr[i] = (rand() % 10) / 10.0;
 	}
 }
 
-void random_t::SetSampleByArray(int length, float* arr)
+void random_t::SetSampleByArray(int length, float*& arr)
 {
-	if (length < 0 || length > 100) {
+	if (length < 0) {
 		throw length;
 	}
+
 	this->length = length;
+	this->arr = new float[length];
 	for (size_t i = 0; i < length; i++) {
 		this->arr[i] = arr[i];
 	}
@@ -60,11 +79,22 @@ void random_t::SetNewNumbers()
 
 random_t& random_t::operator++(int a)
 {
-	if (length < 100) {
-		this->length++;
-		srand(time(NULL));
-		this->arr[length - 1] = (rand() % 10) / 10.0;
+	this->arr = arr_push_back(this->arr);
+
+	srand(time(NULL));
+	this->arr[length - 1] = (rand() % 10) / 10.0;
+	return *this;
+}
+
+random_t& random_t::operator=(const random_t& other)
+{
+	if (this == &other)
 		return *this;
+
+	this->length = other.length;
+	this->arr = new float[other.length];
+	for (size_t i = 0; i < other.length; i++) {
+		this->arr[i] = other.arr[i];
 	}
 
 	return *this;
@@ -103,6 +133,19 @@ void random_t::operator()(float a, float b)
 			std::cout << this->arr[i] << " ";
 		}
 	}
+
+}
+
+float* random_t::arr_push_back(float*& arr)
+{
+	this->length++;
+	float* new_arr = new float[this->length];
+	for (size_t i = 0; i < this->length - 1; i++){
+		new_arr[i] = arr[i];
+	}
+
+	delete[] arr;
+	return new_arr;
 }
 
 std::ostream& operator<<(std::ostream& out, const random_t& sample)
