@@ -90,6 +90,9 @@ random_t& random_t::operator=(const random_t& other)
 {
 	if (this == &other)
 		return *this;
+	
+	if (arr)
+		delete[] arr;
 
 	this->length = other.length;
 	this->arr = new float[other.length];
