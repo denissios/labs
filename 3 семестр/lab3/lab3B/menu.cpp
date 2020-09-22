@@ -80,7 +80,7 @@ void SetByArray(random_t& sample)
 		arr[i] = (rand() % 10) / 10.0;
 	}
 	std::cout << std::endl;
-	sample.SetSampleByArray(length, arr);
+	sample.SetSampleByArray(arr);
 	delete[] arr;
 }
 
@@ -125,7 +125,7 @@ void Interval(random_t& sample)
 	float down = 0, top = 0;
 	down = GetNumber<float>("Enter down number: ");
 	top = GetNumber<float>("Enter up number: ");
-	std::cout << "Numbers in this interval: ";
-	sample(down, top);
+	random_t temp(sample(down, top));
+	std::cout << "Your interval: " << temp;
 	std::cout << std::endl << std::endl;
 }

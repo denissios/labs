@@ -8,23 +8,32 @@ random_t::random_t()
 	this->arr = nullptr;
 }
 
-random_t::random_t(int length)
+random_t::random_t(const int length)
 {
 	this->SetSampleByLength(length);
 }
 
-random_t::random_t(int length, float*& arr)
+random_t::random_t(float*& arr)
 {
-	this->SetSampleByArray(length, arr);
+	this->SetSampleByArray(arr);
 }
 
-random_t::random_t(random_t& other)
+random_t::random_t(const random_t& other)
 {
 	this->length = other.length;
+	if (!length) {
+		this->arr = nullptr;
+		return;
+	}
 	this->arr = new float[other.length];
 	for (size_t i = 0; i < other.length; i++) {
 		this->arr[i] = other.arr[i];
 	}
+}
+
+random_t::random_t(random_t&& other) noexcept : random_t()
+{
+	swap(other);
 }
 
 random_t::~random_t()
@@ -32,10 +41,10 @@ random_t::~random_t()
 	delete[] arr;
 }
 
-void random_t::SetSampleByLength(int length)
+void random_t::SetSampleByLength(const int length)
 {
 	if (length < 0) {
-		throw length;
+		throw std::out_of_range("Invalid length");
 	}
 
 	this->length = length;
@@ -46,25 +55,29 @@ void random_t::SetSampleByLength(int length)
 	}
 }
 
-void random_t::SetSampleByArray(int length, float*& arr)
+void random_t::SetSampleByArray(float*& arr)
 {
-	if (length < 0) {
-		throw length;
+	if (arr) {
+		length = _msize(arr) / sizeof(arr[0]);
+	}
+	else {
+		length = 0;
+		this->arr = nullptr;
+		return;
 	}
 
-	this->length = length;
 	this->arr = new float[length];
 	for (size_t i = 0; i < length; i++) {
 		this->arr[i] = arr[i];
 	}
 }
 
-int random_t::GetLength()
+const int random_t::GetLength()
 {
 	return this->length;
 }
 
-float* random_t::GetArr()
+const float* random_t::GetArr()
 {
 	return this->arr;
 }
@@ -79,10 +92,8 @@ void random_t::SetNewNumbers()
 
 random_t& random_t::operator++(int a)
 {
-	this->arr = arr_push_back(this->arr);
-
 	srand(time(NULL));
-	this->arr[length - 1] = (rand() % 10) / 10.0;
+	arr_push_back((rand() % 10) / 10.0);
 	return *this;
 }
 
@@ -95,6 +106,10 @@ random_t& random_t::operator=(const random_t& other)
 		delete[] arr;
 
 	this->length = other.length;
+	if (!length) {
+		this->arr = nullptr;
+		return *this;
+	}
 	this->arr = new float[other.length];
 	for (size_t i = 0; i < other.length; i++) {
 		this->arr[i] = other.arr[i];
@@ -103,15 +118,15 @@ random_t& random_t::operator=(const random_t& other)
 	return *this;
 }
 
-float& random_t::operator[](int index)
+const float& random_t::operator[](const int index)
 {
 	if (index < 0 || index > this->length - 1) {
-		throw index;
+		throw std::out_of_range("Invalid index");
 	}
 	return this->arr[index];
 }
 
-float random_t::average()
+const float random_t::average()
 {
 	float sum = 0;
 	for (size_t i = 0; i < this->length; i++) {
@@ -124,31 +139,37 @@ float random_t::average()
 random_t& random_t::operator~()
 {
 	for (size_t i = 0; i < this->length; i++) {
-		this->arr[i] = 1.0;
+		this->arr[i] = 1.0 - this->arr[i];
 	}
 	return *this;
 }
 
-void random_t::operator()(float a, float b)
+const random_t random_t::operator()(const float a, const float b)
 {
-	for (size_t i = 0; i < this->length; i++) {
+	random_t tmp;
+	for (size_t i = 0, j = 0; i < this->length; i++) {
 		if (this->arr[i] > a && this->arr[i] < b) {
-			std::cout << this->arr[i] << " ";
+			tmp.arr_push_back(this->arr[i]);
 		}
 	}
 
+	return tmp;
 }
 
-float* random_t::arr_push_back(float*& arr)
+void random_t::arr_push_back(const float element)
 {
-	this->length++;
-	float* new_arr = new float[this->length];
-	for (size_t i = 0; i < this->length - 1; i++){
-		new_arr[i] = arr[i];
-	}
-
+	float* new_arr = new float[length + 1];
+	std::memcpy(new_arr, arr, length * sizeof(float));
+	length++;
+	new_arr[length - 1] = element;
 	delete[] arr;
-	return new_arr;
+	arr = new_arr;
+}
+
+void random_t::swap(random_t& other)
+{
+	std::swap(arr, other.arr);
+	std::swap(length, other.length);
 }
 
 std::ostream& operator<<(std::ostream& out, const random_t& sample)

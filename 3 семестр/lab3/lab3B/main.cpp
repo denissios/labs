@@ -12,12 +12,12 @@ int main()
 		std::cout << "Bad alloc" << std::endl << b_a.what() << std::endl;
 		return 1;
 	}
-	catch (std::exception& ex) {
-		std::cout << "Exception" << ex.what() << std::endl;
+	catch (std::out_of_range& ex) {
+		std::cout << "Bad alloc" << std::endl << ex.what() << std::endl;
 		return 1;
 	}
-	catch (const int ex) {
-		std::cout << "Error! Invalid index or length. Exit..." << std::endl;
+	catch (std::exception& ex) {
+		std::cout << "Exception" << ex.what() << std::endl;
 		return 1;
 	}
 	catch (...) {
