@@ -72,12 +72,12 @@ void random_t::SetSampleByArray(float*& arr)
 	}
 }
 
-const int random_t::GetLength()
+int random_t::GetLength() const noexcept
 {
 	return this->length;
 }
 
-const float* random_t::GetArr()
+float* random_t::GetArr() const
 {
 	return this->arr;
 }
@@ -127,7 +127,7 @@ random_t& random_t::operator=(random_t&& other) noexcept
 	return *this;
 }
 
-const float& random_t::operator[](const int index)
+const float& random_t::operator[](const int index) const
 {
 	if (index < 0 || index > this->length - 1) {
 		throw std::out_of_range("Invalid index");
@@ -135,7 +135,7 @@ const float& random_t::operator[](const int index)
 	return this->arr[index];
 }
 
-const float random_t::average()
+float random_t::average() const
 {
 	float sum = 0;
 	for (size_t i = 0; i < this->length; i++) {
@@ -153,7 +153,7 @@ random_t& random_t::operator~()
 	return *this;
 }
 
-const random_t random_t::operator()(const float a, const float b)
+random_t random_t::operator()(const float a, const float b) const
 {
 	random_t tmp;
 	for (size_t i = 0, j = 0; i < this->length; i++) {

@@ -1,20 +1,28 @@
 #include "menu.h"
 
-#define OPTS_NUM 9
+static constexpr size_t OPTS_NUM = 9;
 
-typedef void (*opt_t)(random_t&);
+using opt_t = void (*)(random_t&);
 
 static const opt_t OPTS[OPTS_NUM] =
 {
 	&SetByLength,
 	&SetByArray,
-	&UpdateNumbers,
-	&Print,
-	&NewNumber,
+	[](random_t& sample) { sample.SetNewNumbers(); },
+	[](random_t& sample) { std::cout << sample << std::endl << std::endl; },
+	[](random_t& sample) { sample++; },
 	&GetByIndex,
-	&Average,
-	&To10,
+	[](random_t& sample) { std::cout << "Average: " << sample.average() << std::endl << std::endl; },
+	[](random_t& sample) { ~sample; },
 	&Interval
+};
+
+static const opt_t name[] =
+{
+	[](random_t& sample)
+	{
+		std::cout << sample << std::endl << std::endl;
+	}
 };
 
 void dialog(random_t& sample)
@@ -84,21 +92,6 @@ void SetByArray(random_t& sample)
 	delete[] arr;
 }
 
-void UpdateNumbers(random_t &sample)
-{
-	sample.SetNewNumbers();
-}
-
-void Print(random_t& sample)
-{
-	std::cout << sample << std::endl << std::endl;
-}
-
-void NewNumber(random_t& sample)
-{
-	sample++;
-}
-
 void GetByIndex(random_t& sample)
 {
 	int index;
@@ -108,16 +101,6 @@ void GetByIndex(random_t& sample)
 		return;
 	}
 	std::cout << sample[index] << std::endl << std::endl;
-}
-
-void Average(random_t& sample)
-{
-	std::cout << "Average: " << sample.average() << std::endl << std::endl;
-}
-
-void To10(random_t& sample)
-{
-	~sample;
 }
 
 void Interval(random_t& sample)

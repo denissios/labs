@@ -12,16 +12,16 @@ public:
 	~random_t();
 	void SetSampleByLength(const int length);
 	void SetSampleByArray(float*& arr);
-	const int GetLength();
-	const float* GetArr();
+	int GetLength() const noexcept;
+	float* GetArr() const;
 	void SetNewNumbers();
 	random_t& operator++(int a);
 	random_t& operator=(const random_t& other);
 	random_t& operator=(random_t&& other) noexcept;
-	const float& operator[](const int index);
-	const float average();
+	const float& operator[](const int index) const;
+	float average() const;
 	random_t& operator~();
-	const random_t operator()(const float a, const float b);
+	random_t operator()(const float a, const float b) const;
 	friend std::ostream& operator<<(std::ostream& out, const random_t& sample);
 
 private:
