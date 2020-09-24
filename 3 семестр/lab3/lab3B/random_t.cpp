@@ -118,6 +118,15 @@ random_t& random_t::operator=(const random_t& other)
 	return *this;
 }
 
+random_t& random_t::operator=(random_t&& other) noexcept
+{
+	if (this != &other) {
+		swap(other);
+	}
+
+	return *this;
+}
+
 const float& random_t::operator[](const int index)
 {
 	if (index < 0 || index > this->length - 1) {

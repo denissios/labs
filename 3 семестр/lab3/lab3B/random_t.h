@@ -17,6 +17,7 @@ public:
 	void SetNewNumbers();
 	random_t& operator++(int a);
 	random_t& operator=(const random_t& other);
+	random_t& operator=(random_t&& other) noexcept;
 	const float& operator[](const int index);
 	const float average();
 	random_t& operator~();
