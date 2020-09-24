@@ -17,14 +17,6 @@ static const opt_t OPTS[OPTS_NUM] =
 	&Interval
 };
 
-static const opt_t name[] =
-{
-	[](random_t& sample)
-	{
-		std::cout << sample << std::endl << std::endl;
-	}
-};
-
 void dialog(random_t& sample)
 {
 	while (true) {
@@ -92,6 +84,21 @@ void SetByArray(random_t& sample)
 	delete[] arr;
 }
 
+//void UpdateNumbers(random_t &sample)
+//{
+//	sample.SetNewNumbers();
+//}
+
+//void Print(random_t& sample)
+//{
+//	std::cout << sample << std::endl << std::endl;
+//}
+
+//void NewNumber(random_t& sample)
+//{
+//	sample++;
+//}
+
 void GetByIndex(random_t& sample)
 {
 	int index;
@@ -102,6 +109,16 @@ void GetByIndex(random_t& sample)
 	}
 	std::cout << sample[index] << std::endl << std::endl;
 }
+
+//void Average(random_t& sample)
+//{
+//	std::cout << "Average: " << sample.average() << std::endl << std::endl;
+//}
+//
+//void To10(random_t& sample)
+//{
+//	~sample;
+//}
 
 void Interval(random_t& sample)
 {
