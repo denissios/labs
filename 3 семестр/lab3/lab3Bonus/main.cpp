@@ -16,7 +16,7 @@ int main()
 		return 1;
 	}
 	catch (const std::out_of_range& ex) {
-		std::cerr << "Bad alloc" << std::endl << ex.what() << std::endl;
+		std::cerr << "Out of range" << std::endl << ex.what() << std::endl;
 		return 1;
 	}
 	catch (const std::exception& ex) {
