@@ -1,0 +1,81 @@
+\hypertarget{class_tower_defence_1_1_upgradable_building}{}\doxysection{Tower\+Defence\+::Upgradable\+Building Class Reference}
+\label{class_tower_defence_1_1_upgradable_building}\index{TowerDefence::UpgradableBuilding@{TowerDefence::UpgradableBuilding}}
+
+
+class for building that can upgrade  
+
+
+
+
+{\ttfamily \#include $<$Upgradable\+Building.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Upgradable\+Building\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_tower_defence_1_1_upgradable_building}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_upgradable_building_a5e7d5a5f68b98678c0a45f73646cfa5d}\label{class_tower_defence_1_1_upgradable_building_a5e7d5a5f68b98678c0a45f73646cfa5d}} 
+{\bfseries Upgradable\+Building} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos, const int lvl=1) noexcept
+\item 
+virtual bool \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_a871a10233c7606f7d07e9921a5d35009}{can\+Upgrade}} () const =0
+\begin{DoxyCompactList}\small\item\em can building upgrade? \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_af5f1f304058b249c32004ce278443d8c}{upgrade}} () noexcept=0
+\begin{DoxyCompactList}\small\item\em has building upgrated? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_upgradable_building_a5b61658bf7cd292c1cf67555c62baa21}\label{class_tower_defence_1_1_upgradable_building_a5b61658bf7cd292c1cf67555c62baa21}} 
+virtual int {\bfseries get\+Upgrade\+Price} () const noexcept=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_upgradable_building_ae27a4b15e5debd9f40ff92843bd1d2a4}\label{class_tower_defence_1_1_upgradable_building_ae27a4b15e5debd9f40ff92843bd1d2a4}} 
+int {\bfseries m\+\_\+lvl}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for building that can upgrade 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_upgradable_building_a871a10233c7606f7d07e9921a5d35009}\label{class_tower_defence_1_1_upgradable_building_a871a10233c7606f7d07e9921a5d35009}} 
+\index{TowerDefence::UpgradableBuilding@{TowerDefence::UpgradableBuilding}!canUpgrade@{canUpgrade}}
+\index{canUpgrade@{canUpgrade}!TowerDefence::UpgradableBuilding@{TowerDefence::UpgradableBuilding}}
+\doxysubsubsection{\texorpdfstring{canUpgrade()}{canUpgrade()}}
+{\footnotesize\ttfamily virtual bool Tower\+Defence\+::\+Upgradable\+Building\+::can\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+can building upgrade? 
+
+\begin{DoxyReturn}{Returns}
+bool (can upgrade or no) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tower_defence_1_1_tower_a23648d47ccd023b9320b07a5f6543221}{Tower\+Defence\+::\+Tower}}, and \mbox{\hyperlink{class_tower_defence_1_1_castle_a6fc088801f9f5345e556a7c96aa6a68a}{Tower\+Defence\+::\+Castle}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_upgradable_building_af5f1f304058b249c32004ce278443d8c}\label{class_tower_defence_1_1_upgradable_building_af5f1f304058b249c32004ce278443d8c}} 
+\index{TowerDefence::UpgradableBuilding@{TowerDefence::UpgradableBuilding}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!TowerDefence::UpgradableBuilding@{TowerDefence::UpgradableBuilding}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily virtual bool Tower\+Defence\+::\+Upgradable\+Building\+::upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}, {\ttfamily [noexcept]}}
+
+
+
+has building upgrated? 
+
+\begin{DoxyReturn}{Returns}
+bool (upgrade or no) 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tower_defence_1_1_tower_af4d0ac1d666ba6c7424729d35547a235}{Tower\+Defence\+::\+Tower}}, and \mbox{\hyperlink{class_tower_defence_1_1_castle_a009f6ebafc7a1b74e3ca6bcc62be8469}{Tower\+Defence\+::\+Castle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Upgradable\+Building.\+hpp\end{DoxyCompactItemize}

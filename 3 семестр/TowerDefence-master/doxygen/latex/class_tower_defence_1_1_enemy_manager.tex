@@ -1,0 +1,128 @@
+\hypertarget{class_tower_defence_1_1_enemy_manager}{}\doxysection{Tower\+Defence\+::Enemy\+Manager Class Reference}
+\label{class_tower_defence_1_1_enemy_manager}\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+
+
+class for controlling enemies  
+
+
+
+
+{\ttfamily \#include $<$Enemy\+Manager.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Enemy\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tower_defence_1_1_enemy_manager}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$ $>$ \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_a45c9dc15804c549d75be0924fc5f4a1b}{get\+Enemies\+Around}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos, const float r) const
+\begin{DoxyCompactList}\small\item\em get enemies around one enemy \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_a21fdbbd555d191a9b55e76d372f882f8}\label{class_tower_defence_1_1_enemy_manager_a21fdbbd555d191a9b55e76d372f882f8}} 
+auto {\bfseries get\+Castle} () const noexcept
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_a65f0e030d0447d535b222187f6cb120c}{set\+Castle}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_castle}{Castle}} $>$ castle)
+\begin{DoxyCompactList}\small\item\em set position for castle \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_ad4347e691bff56aef22847ead3b6bb5f}{update}} (const float dt)
+\begin{DoxyCompactList}\small\item\em update information for all enemies \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_abf4e9ef815151b589a2966143107aff0}{add}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$ enemy, const \mbox{\hyperlink{class_tower_defence_1_1_lair}{Lair}} $\ast$lair\+Id)
+\begin{DoxyCompactList}\small\item\em add enemy to map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_acaeb647077e6d7326d44064caeafc39c}{set\+Graphics}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_graphics}{Graphics}} $>$ graphics) noexcept
+\begin{DoxyCompactList}\small\item\em set graphics for enemies \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager_a4582f1cdbf845fd4292be8406e0f6832}{set\+Landscape}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_landscape}{Landscape}} $>$ landscape) noexcept
+\begin{DoxyCompactList}\small\item\em set landscape for enemies \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for controlling enemies 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_abf4e9ef815151b589a2966143107aff0}\label{class_tower_defence_1_1_enemy_manager_abf4e9ef815151b589a2966143107aff0}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!add@{add}}
+\index{add@{add}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+Manager\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$}]{enemy,  }\item[{const \mbox{\hyperlink{class_tower_defence_1_1_lair}{Lair}} $\ast$}]{lair\+Id }\end{DoxyParamCaption})}
+
+
+
+add enemy to map 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_a45c9dc15804c549d75be0924fc5f4a1b}\label{class_tower_defence_1_1_enemy_manager_a45c9dc15804c549d75be0924fc5f4a1b}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!getEnemiesAround@{getEnemiesAround}}
+\index{getEnemiesAround@{getEnemiesAround}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{getEnemiesAround()}{getEnemiesAround()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$ $>$ Tower\+Defence\+::\+Enemy\+Manager\+::get\+Enemies\+Around (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos,  }\item[{const float}]{r }\end{DoxyParamCaption}) const}
+
+
+
+get enemies around one enemy 
+
+\begin{DoxyReturn}{Returns}
+pointer to vector of \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_a65f0e030d0447d535b222187f6cb120c}\label{class_tower_defence_1_1_enemy_manager_a65f0e030d0447d535b222187f6cb120c}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!setCastle@{setCastle}}
+\index{setCastle@{setCastle}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{setCastle()}{setCastle()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+Manager\+::set\+Castle (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_castle}{Castle}} $>$}]{castle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+set position for castle 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_acaeb647077e6d7326d44064caeafc39c}\label{class_tower_defence_1_1_enemy_manager_acaeb647077e6d7326d44064caeafc39c}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!setGraphics@{setGraphics}}
+\index{setGraphics@{setGraphics}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{setGraphics()}{setGraphics()}}
+{\footnotesize\ttfamily static void Tower\+Defence\+::\+Enemy\+Manager\+::set\+Graphics (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_graphics}{Graphics}} $>$}]{graphics }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+set graphics for enemies 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_a4582f1cdbf845fd4292be8406e0f6832}\label{class_tower_defence_1_1_enemy_manager_a4582f1cdbf845fd4292be8406e0f6832}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!setLandscape@{setLandscape}}
+\index{setLandscape@{setLandscape}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{setLandscape()}{setLandscape()}}
+{\footnotesize\ttfamily static void Tower\+Defence\+::\+Enemy\+Manager\+::set\+Landscape (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_landscape}{Landscape}} $>$}]{landscape }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [noexcept]}}
+
+
+
+set landscape for enemies 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_manager_ad4347e691bff56aef22847ead3b6bb5f}\label{class_tower_defence_1_1_enemy_manager_ad4347e691bff56aef22847ead3b6bb5f}} 
+\index{TowerDefence::EnemyManager@{TowerDefence::EnemyManager}!update@{update}}
+\index{update@{update}!TowerDefence::EnemyManager@{TowerDefence::EnemyManager}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+Manager\+::update (\begin{DoxyParamCaption}\item[{const float}]{dt }\end{DoxyParamCaption})}
+
+
+
+update information for all enemies 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Enemy\+Manager.\+hpp\item 
+Enemy\+Manager.\+cpp\end{DoxyCompactItemize}

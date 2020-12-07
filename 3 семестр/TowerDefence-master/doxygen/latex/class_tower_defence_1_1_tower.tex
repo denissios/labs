@@ -1,0 +1,111 @@
+\hypertarget{class_tower_defence_1_1_tower}{}\doxysection{Tower\+Defence\+::Tower Class Reference}
+\label{class_tower_defence_1_1_tower}\index{TowerDefence::Tower@{TowerDefence::Tower}}
+
+
+class for tower  
+
+
+
+
+{\ttfamily \#include $<$Tower.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Tower\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_tower_defence_1_1_tower}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_a206e1dc71baa54933960749b4b1b2ab4}\label{class_tower_defence_1_1_tower_a206e1dc71baa54933960749b4b1b2ab4}} 
+{\bfseries Tower} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos)
+\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_tower_a23648d47ccd023b9320b07a5f6543221}{can\+Upgrade}} () const override
+\begin{DoxyCompactList}\small\item\em can tower upgrade? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_tower_af4d0ac1d666ba6c7424729d35547a235}{upgrade}} () noexcept override
+\begin{DoxyCompactList}\small\item\em has tower upgrated? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_tower_a502347a9bb57ccc3a680d116d57f1871}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em update information about tower \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_a4d5353439fe159c6cbf1caffeac283a6}\label{class_tower_defence_1_1_tower_a4d5353439fe159c6cbf1caffeac283a6}} 
+int {\bfseries get\+Upgrade\+Price} () const noexcept override
+\item 
+auto \mbox{\hyperlink{class_tower_defence_1_1_tower_a0f1699a4bf6ff20ba8f961a6c1d7e374}{getR}} () const noexcept
+\begin{DoxyCompactList}\small\item\em get radius \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class for tower 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_a23648d47ccd023b9320b07a5f6543221}\label{class_tower_defence_1_1_tower_a23648d47ccd023b9320b07a5f6543221}} 
+\index{TowerDefence::Tower@{TowerDefence::Tower}!canUpgrade@{canUpgrade}}
+\index{canUpgrade@{canUpgrade}!TowerDefence::Tower@{TowerDefence::Tower}}
+\doxysubsubsection{\texorpdfstring{canUpgrade()}{canUpgrade()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Tower\+::can\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+can tower upgrade? 
+
+\begin{DoxyReturn}{Returns}
+bool (can upgrade or no) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_a871a10233c7606f7d07e9921a5d35009}{Tower\+Defence\+::\+Upgradable\+Building}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_a0f1699a4bf6ff20ba8f961a6c1d7e374}\label{class_tower_defence_1_1_tower_a0f1699a4bf6ff20ba8f961a6c1d7e374}} 
+\index{TowerDefence::Tower@{TowerDefence::Tower}!getR@{getR}}
+\index{getR@{getR}!TowerDefence::Tower@{TowerDefence::Tower}}
+\doxysubsubsection{\texorpdfstring{getR()}{getR()}}
+{\footnotesize\ttfamily auto Tower\+Defence\+::\+Tower\+::getR (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+get radius 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_a502347a9bb57ccc3a680d116d57f1871}\label{class_tower_defence_1_1_tower_a502347a9bb57ccc3a680d116d57f1871}} 
+\index{TowerDefence::Tower@{TowerDefence::Tower}!update@{update}}
+\index{update@{update}!TowerDefence::Tower@{TowerDefence::Tower}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Tower\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update information about tower 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}{Tower\+Defence\+::\+Entity}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_tower_af4d0ac1d666ba6c7424729d35547a235}\label{class_tower_defence_1_1_tower_af4d0ac1d666ba6c7424729d35547a235}} 
+\index{TowerDefence::Tower@{TowerDefence::Tower}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!TowerDefence::Tower@{TowerDefence::Tower}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Tower\+::upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+has tower upgrated? 
+
+\begin{DoxyReturn}{Returns}
+bool (upgrade or no) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_af5f1f304058b249c32004ce278443d8c}{Tower\+Defence\+::\+Upgradable\+Building}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Tower.\+hpp\item 
+Tower.\+cpp\end{DoxyCompactItemize}

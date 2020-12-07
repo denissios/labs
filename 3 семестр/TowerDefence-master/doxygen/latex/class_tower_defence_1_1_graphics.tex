@@ -1,0 +1,78 @@
+\hypertarget{class_tower_defence_1_1_graphics}{}\doxysection{Tower\+Defence\+::Graphics Class Reference}
+\label{class_tower_defence_1_1_graphics}\index{TowerDefence::Graphics@{TowerDefence::Graphics}}
+
+
+Graphic class.  
+
+
+
+
+{\ttfamily \#include $<$Graphics.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_adeadb6d1a7dfa64001cabbc243a21120}\label{class_tower_defence_1_1_graphics_adeadb6d1a7dfa64001cabbc243a21120}} 
+auto \& {\bfseries get\+Scene} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_ae20c289189760108bd0e3432e802dff6}\label{class_tower_defence_1_1_graphics_ae20c289189760108bd0e3432e802dff6}} 
+\mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} {\bfseries get\+Selected\+Tile\+Pos} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_a25a15fa1b6a5964fff83edb05c4bd62a}\label{class_tower_defence_1_1_graphics_a25a15fa1b6a5964fff83edb05c4bd62a}} 
+void {\bfseries set\+Tile\+Size} (const float width, const float height) noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_a58b829966e7a60ad84715add018e15d7}\label{class_tower_defence_1_1_graphics_a58b829966e7a60ad84715add018e15d7}} 
+bool {\bfseries is\+Tile\+Selected} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_a3551ba126d7288befabc02e3a13bfc64}\label{class_tower_defence_1_1_graphics_a3551ba126d7288befabc02e3a13bfc64}} 
+void {\bfseries create\+Map} (const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_landscape}{Landscape}} $>$ \&landscape)
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_graphics_aed8496ac4abf449a025e756b9ecf9325}{update}} ()
+\begin{DoxyCompactList}\small\item\em update graphics \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_ae9109894a203586c7e64e72351c122d0}\label{class_tower_defence_1_1_graphics_ae9109894a203586c7e64e72351c122d0}} 
+void {\bfseries show\+Game\+Over} (const int width, const int height)
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_a465bd41c68328d12042d55102bc9f02f}\label{class_tower_defence_1_1_graphics_a465bd41c68328d12042d55102bc9f02f}} 
+void {\bfseries set\+Current\+Tile\+Pos} (int x, int y)
+\item 
+{\footnotesize template$<$typename \+\_\+T $>$ }\\void \mbox{\hyperlink{class_tower_defence_1_1_graphics_a7e68d61780bcbb6a3de6bc3f2d6e4ed4}{add}} (std\+::shared\+\_\+ptr$<$ \+\_\+T $>$ object)
+\begin{DoxyCompactList}\small\item\em add objects to the map \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Graphic class. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_a7e68d61780bcbb6a3de6bc3f2d6e4ed4}\label{class_tower_defence_1_1_graphics_a7e68d61780bcbb6a3de6bc3f2d6e4ed4}} 
+\index{TowerDefence::Graphics@{TowerDefence::Graphics}!add@{add}}
+\index{add@{add}!TowerDefence::Graphics@{TowerDefence::Graphics}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+void Tower\+Defence\+::\+Graphics\+::add (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \+\_\+T $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add objects to the map 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_aed8496ac4abf449a025e756b9ecf9325}\label{class_tower_defence_1_1_graphics_aed8496ac4abf449a025e756b9ecf9325}} 
+\index{TowerDefence::Graphics@{TowerDefence::Graphics}!update@{update}}
+\index{update@{update}!TowerDefence::Graphics@{TowerDefence::Graphics}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Graphics\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+update graphics 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Graphics.\+hpp\item 
+Graphics.\+cpp\end{DoxyCompactItemize}

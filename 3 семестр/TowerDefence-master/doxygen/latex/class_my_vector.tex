@@ -1,0 +1,323 @@
+\hypertarget{class_my_vector}{}\doxysection{My\+Vector$<$ \+\_\+T $>$ Class Template Reference}
+\label{class_my_vector}\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+
+
+array class for storing data \mbox{\hyperlink{class_my_vector}{My\+Vector}} is stored as an dynamic array  
+
+
+
+
+{\ttfamily \#include $<$My\+Vector.\+hpp$>$}
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_my_vector_1_1_iterator}{Iterator}}
+\item 
+class \mbox{\hyperlink{class_my_vector_1_1_reverse___iterator}{Reverse\+\_\+\+Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_vector_a6e76aac251808b420951378743fa3f0d}\label{class_my_vector_a6e76aac251808b420951378743fa3f0d}} 
+using {\bfseries iterator} = \+\_\+T $\ast$
+\item 
+\mbox{\Hypertarget{class_my_vector_ab7c56aed3cbb46098cf2cecec1ca84aa}\label{class_my_vector_ab7c56aed3cbb46098cf2cecec1ca84aa}} 
+using {\bfseries const\+\_\+iterator} = const \+\_\+T $\ast$
+\item 
+\mbox{\Hypertarget{class_my_vector_a40dac18f326fdf0ecb8b6dc1711609dc}\label{class_my_vector_a40dac18f326fdf0ecb8b6dc1711609dc}} 
+using {\bfseries reverse\+\_\+iterator} = std\+::reverse\+\_\+iterator$<$ iterator $>$
+\item 
+\mbox{\Hypertarget{class_my_vector_a5ffbc60cfd4d1c55a0ad02f736f09901}\label{class_my_vector_a5ffbc60cfd4d1c55a0ad02f736f09901}} 
+using {\bfseries const\+\_\+reverse\+\_\+iterator} = std\+::reverse\+\_\+iterator$<$ const\+\_\+iterator $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_my_vector_a6dc33dbbd98e8a729d8aba5295f31b93}\label{class_my_vector_a6dc33dbbd98e8a729d8aba5295f31b93}} 
+{\bfseries My\+Vector} (int length)
+\item 
+\mbox{\Hypertarget{class_my_vector_a04c2df77afb8a64ce614e49ff9aa9c89}\label{class_my_vector_a04c2df77afb8a64ce614e49ff9aa9c89}} 
+{\bfseries My\+Vector} (const std\+::initializer\+\_\+list$<$ \+\_\+T $>$ \&list)
+\item 
+\mbox{\Hypertarget{class_my_vector_ae024ceb47f8faf4b7c6a867709fcf37c}\label{class_my_vector_ae024ceb47f8faf4b7c6a867709fcf37c}} 
+constexpr size\+\_\+t \mbox{\hyperlink{class_my_vector_ae024ceb47f8faf4b7c6a867709fcf37c}{size}} () const noexcept
+\begin{DoxyCompactList}\small\item\em return size \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_my_vector_aa49fa625f422999e07c1a646309cd17a}\label{class_my_vector_aa49fa625f422999e07c1a646309cd17a}} 
+constexpr size\+\_\+t \mbox{\hyperlink{class_my_vector_aa49fa625f422999e07c1a646309cd17a}{capacity}} () const noexcept
+\begin{DoxyCompactList}\small\item\em return capacity \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_my_vector_ab0887b1067c4abd2220f985cce08bc7b}\label{class_my_vector_ab0887b1067c4abd2220f985cce08bc7b}} 
+constexpr bool {\bfseries operator==} (const \mbox{\hyperlink{class_my_vector}{My\+Vector}} \&v) const
+\item 
+\mbox{\Hypertarget{class_my_vector_ac59e1032b20aa5e51cadd08a66f86ce1}\label{class_my_vector_ac59e1032b20aa5e51cadd08a66f86ce1}} 
+constexpr bool {\bfseries operator$<$} (const \mbox{\hyperlink{class_my_vector}{My\+Vector}} \&v) const
+\item 
+\mbox{\Hypertarget{class_my_vector_a2b38198d193cdde0d6741177780dbd67}\label{class_my_vector_a2b38198d193cdde0d6741177780dbd67}} 
+constexpr \+\_\+T \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const int index) const
+\item 
+\+\_\+T \& \mbox{\hyperlink{class_my_vector_a20b0cb46cfed63ffffa4e096071390cf}{at}} (int index)
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+const \+\_\+T \& \mbox{\hyperlink{class_my_vector_af67d78317c4afee55143f3faf9d5c8ec}{at}} (int index) const
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+const \+\_\+T \& \mbox{\hyperlink{class_my_vector_af765c74a7016f7579531af11e4b585f6}{front}} () const
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+\+\_\+T \& \mbox{\hyperlink{class_my_vector_a533844208dfddf09939c2df86118b88e}{front}} ()
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+const \+\_\+T \& \mbox{\hyperlink{class_my_vector_a63c56f419c017493b4ac3826f81193d5}{back}} () const
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+\+\_\+T \& \mbox{\hyperlink{class_my_vector_a41ef67ebbbe5baa6a6c87b7ab6fcea42}{back}} ()
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_acdfd32ef281b6757692222e03f593787}{push\+\_\+back}} (\+\_\+T number)
+\begin{DoxyCompactList}\small\item\em push an element to the back of array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a1fb89e1e2b6e900aec399db93bbacfde}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em pop the last element of the array \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... A\+R\+GS$>$ }\\\+\_\+T \& \mbox{\hyperlink{class_my_vector_a7cef2228094a5eb7320114800275dc74}{emplace\+\_\+back}} (A\+R\+GS \&\&... args)
+\begin{DoxyCompactList}\small\item\em pop the last element of the array \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename... A\+R\+GS$>$ }\\\+\_\+T $\ast$ \mbox{\hyperlink{class_my_vector_a061ba80a7662db8c25b8d97261a8285d}{emplace}} (const \+\_\+T $\ast$pos, A\+R\+GS \&\&... args)
+\begin{DoxyCompactList}\small\item\em pop the last element of the array \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a3bf60033338552bab2bc13b8f8bc4d8a}{clear}} () noexcept
+\begin{DoxyCompactList}\small\item\em clear the array \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{class_my_vector_a6164ca91024e3fd4eae1f3d6e78becdd}{begin}} () noexcept
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+iterator \mbox{\hyperlink{class_my_vector_ada26800d6b09361591495632cc510699}{end}} () noexcept
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+reverse\+\_\+iterator \mbox{\hyperlink{class_my_vector_ac1e41ecdc8264629fce774953a196aa0}{rbegin}} () noexcept
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\item 
+reverse\+\_\+iterator \mbox{\hyperlink{class_my_vector_a45938592e87b74e133588f7ae5f4187b}{rend}} () noexcept
+\begin{DoxyCompactList}\small\item\em accessing an array element \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+T$>$\newline
+class My\+Vector$<$ \+\_\+\+T $>$}
+
+array class for storing data \mbox{\hyperlink{class_my_vector}{My\+Vector}} is stored as an dynamic array 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_vector_a20b0cb46cfed63ffffa4e096071390cf}\label{class_my_vector_a20b0cb46cfed63ffffa4e096071390cf}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!at@{at}}
+\index{at@{at}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+\+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+reference to array element 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std} & \+:: out\+\_\+of\+\_\+range when trying to access a nonexistent array element \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_my_vector_af67d78317c4afee55143f3faf9d5c8ec}\label{class_my_vector_af67d78317c4afee55143f3faf9d5c8ec}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!at@{at}}
+\index{at@{at}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+const \+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::at (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+reference to array element 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std} & \+:: out\+\_\+of\+\_\+range when trying to access a nonexistent array element \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{class_my_vector_a41ef67ebbbe5baa6a6c87b7ab6fcea42}\label{class_my_vector_a41ef67ebbbe5baa6a6c87b7ab6fcea42}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!back@{back}}
+\index{back@{back}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+\+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+a reference to the last element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a63c56f419c017493b4ac3826f81193d5}\label{class_my_vector_a63c56f419c017493b4ac3826f81193d5}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!back@{back}}
+\index{back@{back}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+const \+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+a reference to the last element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a6164ca91024e3fd4eae1f3d6e78becdd}\label{class_my_vector_a6164ca91024e3fd4eae1f3d6e78becdd}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!begin@{begin}}
+\index{begin@{begin}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+iterator \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the first element of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a3bf60033338552bab2bc13b8f8bc4d8a}\label{class_my_vector_a3bf60033338552bab2bc13b8f8bc4d8a}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!clear@{clear}}
+\index{clear@{clear}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+clear the array 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a061ba80a7662db8c25b8d97261a8285d}\label{class_my_vector_a061ba80a7662db8c25b8d97261a8285d}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!emplace@{emplace}}
+\index{emplace@{emplace}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{emplace()}{emplace()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+template$<$typename... A\+R\+GS$>$ \\
+\+\_\+T$\ast$ \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::emplace (\begin{DoxyParamCaption}\item[{const \+\_\+T $\ast$}]{pos,  }\item[{A\+R\+GS \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pop the last element of the array 
+
+\begin{DoxyReturn}{Returns}
+an iterator that points to the newly emplaced element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a7cef2228094a5eb7320114800275dc74}\label{class_my_vector_a7cef2228094a5eb7320114800275dc74}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!emplace\_back@{emplace\_back}}
+\index{emplace\_back@{emplace\_back}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{emplace\_back()}{emplace\_back()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+template$<$typename... A\+R\+GS$>$ \\
+\+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::emplace\+\_\+back (\begin{DoxyParamCaption}\item[{A\+R\+GS \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pop the last element of the array 
+
+\begin{DoxyReturn}{Returns}
+a reference to the newly emplaced element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ada26800d6b09361591495632cc510699}\label{class_my_vector_ada26800d6b09361591495632cc510699}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!end@{end}}
+\index{end@{end}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+iterator \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the first element of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a533844208dfddf09939c2df86118b88e}\label{class_my_vector_a533844208dfddf09939c2df86118b88e}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!front@{front}}
+\index{front@{front}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+\+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+a reference to the first element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_af765c74a7016f7579531af11e4b585f6}\label{class_my_vector_af765c74a7016f7579531af11e4b585f6}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!front@{front}}
+\index{front@{front}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+const \+\_\+T\& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+a reference to the first element in the vector. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a1fb89e1e2b6e900aec399db93bbacfde}\label{class_my_vector_a1fb89e1e2b6e900aec399db93bbacfde}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::pop\+\_\+back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pop the last element of the array 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_acdfd32ef281b6757692222e03f593787}\label{class_my_vector_acdfd32ef281b6757692222e03f593787}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{\+\_\+T}]{number }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+push an element to the back of array 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ac1e41ecdc8264629fce774953a196aa0}\label{class_my_vector_ac1e41ecdc8264629fce774953a196aa0}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!rbegin@{rbegin}}
+\index{rbegin@{rbegin}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{rbegin()}{rbegin()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+reverse\+\_\+iterator \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::rbegin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the last element of the array 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a45938592e87b74e133588f7ae5f4187b}\label{class_my_vector_a45938592e87b74e133588f7ae5f4187b}} 
+\index{MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}!rend@{rend}}
+\index{rend@{rend}!MyVector$<$ \_T $>$@{MyVector$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{rend()}{rend()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+reverse\+\_\+iterator \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ \+\_\+T $>$\+::rend (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+accessing an array element 
+
+\begin{DoxyReturn}{Returns}
+an iterator to the last element of the array 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+My\+Vector.\+hpp\end{DoxyCompactItemize}

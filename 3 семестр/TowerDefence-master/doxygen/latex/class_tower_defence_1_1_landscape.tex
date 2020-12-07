@@ -1,0 +1,214 @@
+\hypertarget{class_tower_defence_1_1_landscape}{}\doxysection{Tower\+Defence\+::Landscape Class Reference}
+\label{class_tower_defence_1_1_landscape}\index{TowerDefence::Landscape@{TowerDefence::Landscape}}
+
+
+class for landscape on map  
+
+
+
+
+{\ttfamily \#include $<$Landscape.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_aa9da9ae7ecf1bbdf9c76323a3b06bd4e}\label{class_tower_defence_1_1_landscape_aa9da9ae7ecf1bbdf9c76323a3b06bd4e}} 
+{\bfseries Landscape} (const unsigned width, const unsigned height)
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_abfe4c22b1eafcc40f1c48e9d5128279e}\label{class_tower_defence_1_1_landscape_abfe4c22b1eafcc40f1c48e9d5128279e}} 
+constexpr auto {\bfseries get\+Width} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_aab186b873408e9017fd8f0f311f7d1ac}\label{class_tower_defence_1_1_landscape_aab186b873408e9017fd8f0f311f7d1ac}} 
+constexpr auto {\bfseries get\+Height} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a0aefa741d026062cce3f8b288a0ac64b}\label{class_tower_defence_1_1_landscape_a0aefa741d026062cce3f8b288a0ac64b}} 
+const auto \& {\bfseries get\+Entities} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_ad2aa6e47a9ee92693ec86d54ffb30858}\label{class_tower_defence_1_1_landscape_ad2aa6e47a9ee92693ec86d54ffb30858}} 
+const std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_cell}{Cell}} $>$ {\bfseries get\+Cell} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const noexcept
+\item 
+const auto \& \mbox{\hyperlink{class_tower_defence_1_1_landscape_a3e9a65a53ca8c2195a6ea9f84c541964}{get\+Cells}} () const noexcept
+\item 
+auto \mbox{\hyperlink{class_tower_defence_1_1_landscape_af15fbd44e412268893e88e0a1c92b8e6}{get\+Castle}} () const noexcept
+\item 
+auto \mbox{\hyperlink{class_tower_defence_1_1_landscape_adbe7f35a1d0d2085e52c68dd937f6e60}{get\+Enemy\+Manager}} () const noexcept
+\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_landscape_aef01ae6f3b777fcfe1f70ddc866f9b74}{is\+In\+Field}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const noexcept
+\begin{DoxyCompactList}\small\item\em Is this position on field? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_landscape_aec4e5c2a8c516801e641db024c4bff98}{update}} (const float dt)
+\begin{DoxyCompactList}\small\item\em update information about landscape \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+\+Entity\+Type , typename... \+\_\+\+Args, typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\+Entity, \+\_\+\+Entity\+Type$>$$>$$>$ }\\auto \& \mbox{\hyperlink{class_tower_defence_1_1_landscape_a466290e8de1a272fa1f873426c00fc43}{add\+Entity}} (\+\_\+\+Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em add a new entity \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename \+\_\+\+Cell\+Type , typename... \+\_\+\+Args, typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\+Cell, \+\_\+\+Cell\+Type$>$$>$$>$ }\\auto \& \mbox{\hyperlink{class_tower_defence_1_1_landscape_ac932fa26844490ec430284c74c86766a}{add\+Cell}} (\+\_\+\+Args \&\&... args)
+\begin{DoxyCompactList}\small\item\em add a new cell \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_landscape_acb6342b7813aa84d14552661f100f30a}{can\+Build\+Here}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const
+\begin{DoxyCompactList}\small\item\em can we build here? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_landscape_ada50de4a78912e900934c5b271c0619f}{can\+Upgrade\+Here}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const
+\begin{DoxyCompactList}\small\item\em can we upgrade this? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_landscape_a16e92e5345c2bf8eb8556cc6bdccb1df}{can\+Repair\+Here}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const
+\begin{DoxyCompactList}\small\item\em can we repair this? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_landscape_a1e3e85c12939679d645e2c4b067b2500}{build}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos)
+\begin{DoxyCompactList}\small\item\em build anything \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_landscape_a6080eb465af8b631c057570a0b801b12}{upgrade}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos)
+\begin{DoxyCompactList}\small\item\em upgrade anything \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_ab6c2d22f24607a7f58ffc1c972b5cf43}\label{class_tower_defence_1_1_landscape_ab6c2d22f24607a7f58ffc1c972b5cf43}} 
+void {\bfseries repair} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for landscape on map 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_ac932fa26844490ec430284c74c86766a}\label{class_tower_defence_1_1_landscape_ac932fa26844490ec430284c74c86766a}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!addCell@{addCell}}
+\index{addCell@{addCell}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{addCell()}{addCell()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Cell\+Type , typename... \+\_\+\+Args, typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\+Cell, \+\_\+\+Cell\+Type$>$$>$$>$ \\
+auto\& Tower\+Defence\+::\+Landscape\+::add\+Cell (\begin{DoxyParamCaption}\item[{\+\_\+\+Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add a new cell 
+
+\begin{DoxyReturn}{Returns}
+reference to new cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a466290e8de1a272fa1f873426c00fc43}\label{class_tower_defence_1_1_landscape_a466290e8de1a272fa1f873426c00fc43}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!addEntity@{addEntity}}
+\index{addEntity@{addEntity}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{addEntity()}{addEntity()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+\+Entity\+Type , typename... \+\_\+\+Args, typename  = std\+::enable\+\_\+if\+\_\+t$<$std\+::is\+\_\+base\+\_\+of\+\_\+v$<$\+Entity, \+\_\+\+Entity\+Type$>$$>$$>$ \\
+auto\& Tower\+Defence\+::\+Landscape\+::add\+Entity (\begin{DoxyParamCaption}\item[{\+\_\+\+Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+add a new entity 
+
+\begin{DoxyReturn}{Returns}
+reference to new entity 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a1e3e85c12939679d645e2c4b067b2500}\label{class_tower_defence_1_1_landscape_a1e3e85c12939679d645e2c4b067b2500}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!build@{build}}
+\index{build@{build}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Landscape\+::build (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+build anything 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_acb6342b7813aa84d14552661f100f30a}\label{class_tower_defence_1_1_landscape_acb6342b7813aa84d14552661f100f30a}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!canBuildHere@{canBuildHere}}
+\index{canBuildHere@{canBuildHere}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{canBuildHere()}{canBuildHere()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Landscape\+::can\+Build\+Here (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+can we build here? 
+
+\begin{DoxyReturn}{Returns}
+bool (can or can\textquotesingle{}t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a16e92e5345c2bf8eb8556cc6bdccb1df}\label{class_tower_defence_1_1_landscape_a16e92e5345c2bf8eb8556cc6bdccb1df}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!canRepairHere@{canRepairHere}}
+\index{canRepairHere@{canRepairHere}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{canRepairHere()}{canRepairHere()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Landscape\+::can\+Repair\+Here (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+can we repair this? 
+
+\begin{DoxyReturn}{Returns}
+bool (can or can\textquotesingle{}t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_ada50de4a78912e900934c5b271c0619f}\label{class_tower_defence_1_1_landscape_ada50de4a78912e900934c5b271c0619f}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!canUpgradeHere@{canUpgradeHere}}
+\index{canUpgradeHere@{canUpgradeHere}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{canUpgradeHere()}{canUpgradeHere()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Landscape\+::can\+Upgrade\+Here (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+can we upgrade this? 
+
+\begin{DoxyReturn}{Returns}
+bool (can or can\textquotesingle{}t) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_af15fbd44e412268893e88e0a1c92b8e6}\label{class_tower_defence_1_1_landscape_af15fbd44e412268893e88e0a1c92b8e6}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!getCastle@{getCastle}}
+\index{getCastle@{getCastle}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{getCastle()}{getCastle()}}
+{\footnotesize\ttfamily auto Tower\+Defence\+::\+Landscape\+::get\+Castle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+pointer on \mbox{\hyperlink{class_tower_defence_1_1_castle}{Castle}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a3e9a65a53ca8c2195a6ea9f84c541964}\label{class_tower_defence_1_1_landscape_a3e9a65a53ca8c2195a6ea9f84c541964}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!getCells@{getCells}}
+\index{getCells@{getCells}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{getCells()}{getCells()}}
+{\footnotesize\ttfamily const auto\& Tower\+Defence\+::\+Landscape\+::get\+Cells (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+reference on \mbox{\hyperlink{class_tower_defence_1_1_cell}{Cell}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_adbe7f35a1d0d2085e52c68dd937f6e60}\label{class_tower_defence_1_1_landscape_adbe7f35a1d0d2085e52c68dd937f6e60}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!getEnemyManager@{getEnemyManager}}
+\index{getEnemyManager@{getEnemyManager}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{getEnemyManager()}{getEnemyManager()}}
+{\footnotesize\ttfamily auto Tower\+Defence\+::\+Landscape\+::get\+Enemy\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\begin{DoxyReturn}{Returns}
+pointer on \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager}{Enemy\+Manager}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_aef01ae6f3b777fcfe1f70ddc866f9b74}\label{class_tower_defence_1_1_landscape_aef01ae6f3b777fcfe1f70ddc866f9b74}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!isInField@{isInField}}
+\index{isInField@{isInField}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{isInField()}{isInField()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Landscape\+::is\+In\+Field (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+Is this position on field? 
+
+\begin{DoxyReturn}{Returns}
+bool (yes or no) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_aec4e5c2a8c516801e641db024c4bff98}\label{class_tower_defence_1_1_landscape_aec4e5c2a8c516801e641db024c4bff98}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!update@{update}}
+\index{update@{update}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Landscape\+::update (\begin{DoxyParamCaption}\item[{const float}]{dt }\end{DoxyParamCaption})}
+
+
+
+update information about landscape 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_landscape_a6080eb465af8b631c057570a0b801b12}\label{class_tower_defence_1_1_landscape_a6080eb465af8b631c057570a0b801b12}} 
+\index{TowerDefence::Landscape@{TowerDefence::Landscape}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!TowerDefence::Landscape@{TowerDefence::Landscape}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Landscape\+::upgrade (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+upgrade anything 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Landscape.\+hpp\item 
+Landscape.\+cpp\end{DoxyCompactItemize}

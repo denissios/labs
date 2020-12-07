@@ -1,0 +1,70 @@
+\hypertarget{class_tower_defence_1_1_aura}{}\doxysection{Tower\+Defence\+::Aura Class Reference}
+\label{class_tower_defence_1_1_aura}\index{TowerDefence::Aura@{TowerDefence::Aura}}
+
+
+set position for object\textquotesingle{}s \mbox{\hyperlink{class_tower_defence_1_1_h_p}{HP}}  
+
+
+
+
+{\ttfamily \#include $<$Aura.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Aura\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_tower_defence_1_1_aura}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_aura_aa1a859d663932fb060d32735f8923b2c}\label{class_tower_defence_1_1_aura_aa1a859d663932fb060d32735f8923b2c}} 
+{\bfseries Aura} (const float r)
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_aura_a91268386cda2f379636fd6b4c92697f5}\label{class_tower_defence_1_1_aura_a91268386cda2f379636fd6b4c92697f5}} 
+constexpr auto {\bfseries get\+Radius} () const noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_aura_ac85468fb86311f223966601d41d8d9ed}\label{class_tower_defence_1_1_aura_ac85468fb86311f223966601d41d8d9ed}} 
+void {\bfseries apply\+Effect} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_aura_ab20330428317709824d3ecf4e415a2c2}\label{class_tower_defence_1_1_aura_ab20330428317709824d3ecf4e415a2c2}} 
+static void {\bfseries set\+Enemy\+Manager} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager}{Enemy\+Manager}} $>$ enemy\+Manager) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_aura_aa23296f76f104dfe231597805d087821}{apply}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$ enemy) const =0
+\begin{DoxyCompactList}\small\item\em increase aura \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+set position for object\textquotesingle{}s \mbox{\hyperlink{class_tower_defence_1_1_h_p}{HP}} 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_aura_aa23296f76f104dfe231597805d087821}\label{class_tower_defence_1_1_aura_aa23296f76f104dfe231597805d087821}} 
+\index{TowerDefence::Aura@{TowerDefence::Aura}!apply@{apply}}
+\index{apply@{apply}!TowerDefence::Aura@{TowerDefence::Aura}}
+\doxysubsubsection{\texorpdfstring{apply()}{apply()}}
+{\footnotesize\ttfamily virtual void Tower\+Defence\+::\+Aura\+::apply (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$}]{enemy }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+increase aura 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Aura.\+hpp\item 
+Aura.\+cpp\end{DoxyCompactItemize}

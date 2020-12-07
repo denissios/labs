@@ -1,0 +1,69 @@
+\hypertarget{class_tower_defence_1_1_route}{}\doxysection{Tower\+Defence\+::Route Class Reference}
+\label{class_tower_defence_1_1_route}\index{TowerDefence::Route@{TowerDefence::Route}}
+
+
+class for own route ~\newline
+  
+
+
+
+
+{\ttfamily \#include $<$Route.\+hpp$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_route_a26852101630041f5c113524f00a55408}\label{class_tower_defence_1_1_route_a26852101630041f5c113524f00a55408}} 
+{\bfseries Route} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&\mbox{\hyperlink{class_tower_defence_1_1_route_a4ffea6dfa7ea0ffb20bb7a0b43d2a5f2}{to}}, std\+::queue$<$ \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} $>$ path) noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_route_aa9897863e9da6fa6b7985e13457bfbb6}\label{class_tower_defence_1_1_route_aa9897863e9da6fa6b7985e13457bfbb6}} 
+auto \mbox{\hyperlink{class_tower_defence_1_1_route_aa9897863e9da6fa6b7985e13457bfbb6}{get\+Next}} () noexcept
+\begin{DoxyCompactList}\small\item\em get the next position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_route_a8db4a42137c545891b57d2e9a27f82c5}\label{class_tower_defence_1_1_route_a8db4a42137c545891b57d2e9a27f82c5}} 
+auto \mbox{\hyperlink{class_tower_defence_1_1_route_a8db4a42137c545891b57d2e9a27f82c5}{next}} () const noexcept
+\begin{DoxyCompactList}\small\item\em find the next position on road \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_tower_defence_1_1_route_a4ffea6dfa7ea0ffb20bb7a0b43d2a5f2}{to}} () const noexcept
+\begin{DoxyCompactList}\small\item\em position where to go \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_route_a9ba0245b505b3016dbb88a0dc5d3a3df}{is\+Finished}} () const noexcept
+\begin{DoxyCompactList}\small\item\em is object finished of no? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_route_a2806d4a54f2b48246f909879f2fedb57}\label{class_tower_defence_1_1_route_a2806d4a54f2b48246f909879f2fedb57}} 
+{\bfseries operator bool} () const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for own route ~\newline
+ 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_route_a9ba0245b505b3016dbb88a0dc5d3a3df}\label{class_tower_defence_1_1_route_a9ba0245b505b3016dbb88a0dc5d3a3df}} 
+\index{TowerDefence::Route@{TowerDefence::Route}!isFinished@{isFinished}}
+\index{isFinished@{isFinished}!TowerDefence::Route@{TowerDefence::Route}}
+\doxysubsubsection{\texorpdfstring{isFinished()}{isFinished()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Route\+::is\+Finished (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+is object finished of no? 
+
+\begin{DoxyReturn}{Returns}
+bool (finished or no) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_route_a4ffea6dfa7ea0ffb20bb7a0b43d2a5f2}\label{class_tower_defence_1_1_route_a4ffea6dfa7ea0ffb20bb7a0b43d2a5f2}} 
+\index{TowerDefence::Route@{TowerDefence::Route}!to@{to}}
+\index{to@{to}!TowerDefence::Route@{TowerDefence::Route}}
+\doxysubsubsection{\texorpdfstring{to()}{to()}}
+{\footnotesize\ttfamily constexpr auto Tower\+Defence\+::\+Route\+::to (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+position where to go 
+
+\begin{DoxyReturn}{Returns}
+position 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Route.\+hpp\end{DoxyCompactItemize}

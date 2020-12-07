@@ -1,0 +1,107 @@
+\hypertarget{class_tower_defence_1_1_graphics_object}{}\doxysection{Tower\+Defence\+::Graphics\+Object$<$ \+\_\+T $>$ Class Template Reference}
+\label{class_tower_defence_1_1_graphics_object}\index{TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}}
+
+
+graphics for object  
+
+
+
+
+{\ttfamily \#include $<$Graphics\+Object.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Graphics\+Object$<$ \+\_\+T $>$\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.545455cm]{class_tower_defence_1_1_graphics_object}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tower_defence_1_1_graphics_object_addd64803714de64a11eb523170435c64}{Graphics\+Object}} (std\+::shared\+\_\+ptr$<$ Q\+Graphics\+Scene $>$ scene, Q\+Pixmap pixmap, std\+::shared\+\_\+ptr$<$ \+\_\+T $>$ object)
+\begin{DoxyCompactList}\small\item\em constructor initializing the graphics for object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_add179e479e4ff4e632e5084f0b7ead4d}\label{class_tower_defence_1_1_graphics_object_add179e479e4ff4e632e5084f0b7ead4d}} 
+constexpr auto {\bfseries get\+Object} () const noexcept
+\item 
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_a66782bb59e12137716ab6d5eb7e8b3bf}{set\+Pos}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) noexcept
+\begin{DoxyCompactList}\small\item\em set object graphics \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_aac94c3079cf717316eb743239652f9c5}{update}} (const float dx, const float dy) noexcept
+\begin{DoxyCompactList}\small\item\em update object graphics \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_a8df54f9c501194ef5e825c239e3c69f4}\label{class_tower_defence_1_1_graphics_object_a8df54f9c501194ef5e825c239e3c69f4}} 
+Q\+Graphics\+Pixmap\+Item $\ast$ {\bfseries m\+\_\+item}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_af58fb2e499e7720096543611b54a880e}\label{class_tower_defence_1_1_graphics_object_af58fb2e499e7720096543611b54a880e}} 
+std\+::shared\+\_\+ptr$<$ \+\_\+T $>$ {\bfseries m\+\_\+object}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename \+\_\+T$>$\newline
+class Tower\+Defence\+::\+Graphics\+Object$<$ \+\_\+\+T $>$}
+
+graphics for object 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_addd64803714de64a11eb523170435c64}\label{class_tower_defence_1_1_graphics_object_addd64803714de64a11eb523170435c64}} 
+\index{TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}!GraphicsObject@{GraphicsObject}}
+\index{GraphicsObject@{GraphicsObject}!TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{GraphicsObject()}{GraphicsObject()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+\mbox{\hyperlink{class_tower_defence_1_1_graphics_object}{Tower\+Defence\+::\+Graphics\+Object}}$<$ \+\_\+T $>$\+::\mbox{\hyperlink{class_tower_defence_1_1_graphics_object}{Graphics\+Object}} (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ Q\+Graphics\+Scene $>$}]{scene,  }\item[{Q\+Pixmap}]{pixmap,  }\item[{std\+::shared\+\_\+ptr$<$ \+\_\+T $>$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+constructor initializing the graphics for object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em object} & -\/ graphics for this object \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_a66782bb59e12137716ab6d5eb7e8b3bf}\label{class_tower_defence_1_1_graphics_object_a66782bb59e12137716ab6d5eb7e8b3bf}} 
+\index{TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}!setPos@{setPos}}
+\index{setPos@{setPos}!TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_graphics_object}{Tower\+Defence\+::\+Graphics\+Object}}$<$ \+\_\+T $>$\+::set\+Pos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+set object graphics 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_and_aura_ab06a86c8ee0dfd3ce32c6423f73e7b26}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P\+And\+Aura$<$ \+\_\+\+T $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_and_aura_ab06a86c8ee0dfd3ce32c6423f73e7b26}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P\+And\+Aura$<$ Tower\+Defence\+::\+Enemy $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a727a0de3cac8fe674ed2aeb5881632c9}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ \+\_\+\+T $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a727a0de3cac8fe674ed2aeb5881632c9}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ Tower\+Defence\+::\+Castle $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a727a0de3cac8fe674ed2aeb5881632c9}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ Tower\+Defence\+::\+Wall $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_aura_a38ce56a9572e74e5e0f626ccb49871ee}{Tower\+Defence\+::\+Graphics\+Object\+With\+Aura$<$ \+\_\+\+T $>$}}, and \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_aura_a38ce56a9572e74e5e0f626ccb49871ee}{Tower\+Defence\+::\+Graphics\+Object\+With\+Aura$<$ Tower\+Defence\+::\+Tower $>$}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_graphics_object_aac94c3079cf717316eb743239652f9c5}\label{class_tower_defence_1_1_graphics_object_aac94c3079cf717316eb743239652f9c5}} 
+\index{TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}!update@{update}}
+\index{update@{update}!TowerDefence::GraphicsObject$<$ \_T $>$@{TowerDefence::GraphicsObject$<$ \_T $>$}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily template$<$typename \+\_\+T $>$ \\
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_graphics_object}{Tower\+Defence\+::\+Graphics\+Object}}$<$ \+\_\+T $>$\+::update (\begin{DoxyParamCaption}\item[{const float}]{dx,  }\item[{const float}]{dy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+update object graphics 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_and_aura_a8bf560aa1d74cc2caca8ef10770409b8}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P\+And\+Aura$<$ \+\_\+\+T $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_and_aura_a8bf560aa1d74cc2caca8ef10770409b8}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P\+And\+Aura$<$ Tower\+Defence\+::\+Enemy $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a2d2330af05a32190f1948fafe56462d2}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ \+\_\+\+T $>$}}, \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a2d2330af05a32190f1948fafe56462d2}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ Tower\+Defence\+::\+Castle $>$}}, and \mbox{\hyperlink{class_tower_defence_1_1_graphics_object_with_h_p_a2d2330af05a32190f1948fafe56462d2}{Tower\+Defence\+::\+Graphics\+Object\+With\+H\+P$<$ Tower\+Defence\+::\+Wall $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Graphics\+Object.\+hpp\end{DoxyCompactItemize}

@@ -1,0 +1,105 @@
+\hypertarget{class_tower_defence_1_1_enemy}{}\doxysection{Tower\+Defence\+::Enemy Class Reference}
+\label{class_tower_defence_1_1_enemy}\index{TowerDefence::Enemy@{TowerDefence::Enemy}}
+
+
+class for all enemies  
+
+
+
+
+{\ttfamily \#include $<$Enemy.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.994653cm]{class_tower_defence_1_1_enemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_ab43a50ebba2c33e7bce871b401653f9d}\label{class_tower_defence_1_1_enemy_ab43a50ebba2c33e7bce871b401653f9d}} 
+{\bfseries Enemy} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_tower_defence_1_1_enemy_props}{Enemy\+Props}} $>$ props) noexcept
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_a101479eef8c871d57383481667db845c}\label{class_tower_defence_1_1_enemy_a101479eef8c871d57383481667db845c}} 
+int {\bfseries get\+Max\+Health} () const noexcept final
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_af75cc5ba8ce549cb9a2b46e4868ba1eb}{update}} (const float dt) override final
+\begin{DoxyCompactList}\small\item\em update information about own enemy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_a95eb761d636f34aa3af8f8bf380b87f1}{set\+Route}} (\mbox{\hyperlink{class_tower_defence_1_1_route}{Route}} route) noexcept
+\begin{DoxyCompactList}\small\item\em set route for own enemy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_enemy_a265b5a246803a393b18a9e6b142b1cd1}{set\+Properties}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_tower_defence_1_1_enemy_props}{Enemy\+Props}} $>$ props) noexcept
+\begin{DoxyCompactList}\small\item\em set properties for own enemy \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_aec08b2d305baa72e1b17e44923176266}\label{class_tower_defence_1_1_enemy_aec08b2d305baa72e1b17e44923176266}} 
+static void {\bfseries set\+Enemy\+Manager} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager}{Enemy\+Manager}} $>$ enemy\+Manager) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_abddc0dc9e34f99059de58b74b6ffc3d3}\label{class_tower_defence_1_1_enemy_abddc0dc9e34f99059de58b74b6ffc3d3}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_tower_defence_1_1_enemy_props}{Enemy\+Props}} $>$ {\bfseries m\+\_\+props}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_ae89dafc907777436d76959bc02c05815}\label{class_tower_defence_1_1_enemy_ae89dafc907777436d76959bc02c05815}} 
+\mbox{\hyperlink{class_tower_defence_1_1_route}{Route}} {\bfseries m\+\_\+route}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_a8dcf8e8225237134c82b5a88e22df70b}\label{class_tower_defence_1_1_enemy_a8dcf8e8225237134c82b5a88e22df70b}} 
+\mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_aura}{Aura}} $>$ $>$ {\bfseries m\+\_\+auras}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for all enemies 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_a265b5a246803a393b18a9e6b142b1cd1}\label{class_tower_defence_1_1_enemy_a265b5a246803a393b18a9e6b142b1cd1}} 
+\index{TowerDefence::Enemy@{TowerDefence::Enemy}!setProperties@{setProperties}}
+\index{setProperties@{setProperties}!TowerDefence::Enemy@{TowerDefence::Enemy}}
+\doxysubsubsection{\texorpdfstring{setProperties()}{setProperties()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+::set\+Properties (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{struct_tower_defence_1_1_enemy_props}{Enemy\+Props}} $>$}]{props }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+set properties for own enemy 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_a95eb761d636f34aa3af8f8bf380b87f1}\label{class_tower_defence_1_1_enemy_a95eb761d636f34aa3af8f8bf380b87f1}} 
+\index{TowerDefence::Enemy@{TowerDefence::Enemy}!setRoute@{setRoute}}
+\index{setRoute@{setRoute}!TowerDefence::Enemy@{TowerDefence::Enemy}}
+\doxysubsubsection{\texorpdfstring{setRoute()}{setRoute()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+::set\+Route (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tower_defence_1_1_route}{Route}}}]{route }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+set route for own enemy 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_enemy_af75cc5ba8ce549cb9a2b46e4868ba1eb}\label{class_tower_defence_1_1_enemy_af75cc5ba8ce549cb9a2b46e4868ba1eb}} 
+\index{TowerDefence::Enemy@{TowerDefence::Enemy}!update@{update}}
+\index{update@{update}!TowerDefence::Enemy@{TowerDefence::Enemy}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Enemy\+::update (\begin{DoxyParamCaption}\item[{const float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update information about own enemy 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}{Tower\+Defence\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Enemy.\+hpp\item 
+Enemy.\+cpp\end{DoxyCompactItemize}

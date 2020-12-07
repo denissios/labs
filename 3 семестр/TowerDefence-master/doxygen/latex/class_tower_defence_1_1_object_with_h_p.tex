@@ -1,0 +1,103 @@
+\hypertarget{class_tower_defence_1_1_object_with_h_p}{}\doxysection{Tower\+Defence\+::Object\+With\+HP Class Reference}
+\label{class_tower_defence_1_1_object_with_h_p}\index{TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}}
+
+
+class for object that has \mbox{\hyperlink{class_tower_defence_1_1_h_p}{HP}}  
+
+
+
+
+{\ttfamily \#include $<$Object\+With\+H\+P.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Object\+With\+HP\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.994653cm]{class_tower_defence_1_1_object_with_h_p}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a0355b2367aae7631e413da9fef41540b}\label{class_tower_defence_1_1_object_with_h_p_a0355b2367aae7631e413da9fef41540b}} 
+constexpr {\bfseries Object\+With\+HP} (const int health=0) noexcept
+\item 
+constexpr auto \mbox{\hyperlink{class_tower_defence_1_1_object_with_h_p_a4a3c5b88e70882b338c6d5be9fae158f}{get\+Health}} () const noexcept
+\begin{DoxyCompactList}\small\item\em get object health \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_object_with_h_p_a68672871d4a5fd84c457eca250d08454}{is\+Alive}} () const noexcept
+\begin{DoxyCompactList}\small\item\em is this oblect alive? \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a144255affdbed63c6576250fb30bb7d5}\label{class_tower_defence_1_1_object_with_h_p_a144255affdbed63c6576250fb30bb7d5}} 
+virtual int {\bfseries get\+Max\+Health} () const noexcept=0
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_object_with_h_p_abaf394320b2e7de41e1b787d9b849718}{decrease\+Health}} (const int amount)
+\begin{DoxyCompactList}\small\item\em decrease health of object \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_object_with_h_p_a5bcdc368a67768a74bf357940e42d9c2}{increase\+Health}} (const int amount)
+\begin{DoxyCompactList}\small\item\em increase health of object \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a04d43460ad8823475047e2a240f290ea}\label{class_tower_defence_1_1_object_with_h_p_a04d43460ad8823475047e2a240f290ea}} 
+int {\bfseries m\+\_\+health}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class for object that has \mbox{\hyperlink{class_tower_defence_1_1_h_p}{HP}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_abaf394320b2e7de41e1b787d9b849718}\label{class_tower_defence_1_1_object_with_h_p_abaf394320b2e7de41e1b787d9b849718}} 
+\index{TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}!decreaseHealth@{decreaseHealth}}
+\index{decreaseHealth@{decreaseHealth}!TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}}
+\doxysubsubsection{\texorpdfstring{decreaseHealth()}{decreaseHealth()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Object\+With\+H\+P\+::decrease\+Health (\begin{DoxyParamCaption}\item[{const int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+decrease health of object 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a4a3c5b88e70882b338c6d5be9fae158f}\label{class_tower_defence_1_1_object_with_h_p_a4a3c5b88e70882b338c6d5be9fae158f}} 
+\index{TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}!getHealth@{getHealth}}
+\index{getHealth@{getHealth}!TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}}
+\doxysubsubsection{\texorpdfstring{getHealth()}{getHealth()}}
+{\footnotesize\ttfamily constexpr auto Tower\+Defence\+::\+Object\+With\+H\+P\+::get\+Health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get object health 
+
+\begin{DoxyReturn}{Returns}
+int (health) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a5bcdc368a67768a74bf357940e42d9c2}\label{class_tower_defence_1_1_object_with_h_p_a5bcdc368a67768a74bf357940e42d9c2}} 
+\index{TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}!increaseHealth@{increaseHealth}}
+\index{increaseHealth@{increaseHealth}!TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}}
+\doxysubsubsection{\texorpdfstring{increaseHealth()}{increaseHealth()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Object\+With\+H\+P\+::increase\+Health (\begin{DoxyParamCaption}\item[{const int}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+increase health of object 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_object_with_h_p_a68672871d4a5fd84c457eca250d08454}\label{class_tower_defence_1_1_object_with_h_p_a68672871d4a5fd84c457eca250d08454}} 
+\index{TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}!isAlive@{isAlive}}
+\index{isAlive@{isAlive}!TowerDefence::ObjectWithHP@{TowerDefence::ObjectWithHP}}
+\doxysubsubsection{\texorpdfstring{isAlive()}{isAlive()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Object\+With\+H\+P\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+is this oblect alive? 
+
+\begin{DoxyReturn}{Returns}
+bool (alive or no) 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Object\+With\+H\+P.\+hpp\end{DoxyCompactItemize}

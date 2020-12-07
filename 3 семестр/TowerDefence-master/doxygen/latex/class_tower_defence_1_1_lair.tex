@@ -1,0 +1,76 @@
+\hypertarget{class_tower_defence_1_1_lair}{}\doxysection{Tower\+Defence\+::Lair Class Reference}
+\label{class_tower_defence_1_1_lair}\index{TowerDefence::Lair@{TowerDefence::Lair}}
+
+
+class for lair  
+
+
+
+
+{\ttfamily \#include $<$Lair.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Lair\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_tower_defence_1_1_lair}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_lair_ad51c634d830ff792383bc70f11d62506}\label{class_tower_defence_1_1_lair_ad51c634d830ff792383bc70f11d62506}} 
+{\bfseries Lair} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos, std\+::multimap$<$ float, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy}{Enemy}} $>$$>$ shedule) noexcept
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_lair_a9901f9769a8f1a87798f8cffe41fd343}{update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em update information about lair \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_lair_a5991668a04f48de85699425d14a5c21f}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em spawn all enemies \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_lair_a309fd81fb2b3d0f8a7318a10dc572fb1}\label{class_tower_defence_1_1_lair_a309fd81fb2b3d0f8a7318a10dc572fb1}} 
+static void {\bfseries set\+Enemy\+Manager} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_tower_defence_1_1_enemy_manager}{Enemy\+Manager}} $>$ enemy\+Manager) noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class for lair 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_lair_a5991668a04f48de85699425d14a5c21f}\label{class_tower_defence_1_1_lair_a5991668a04f48de85699425d14a5c21f}} 
+\index{TowerDefence::Lair@{TowerDefence::Lair}!spawn@{spawn}}
+\index{spawn@{spawn}!TowerDefence::Lair@{TowerDefence::Lair}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Lair\+::spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+spawn all enemies 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_lair_a9901f9769a8f1a87798f8cffe41fd343}\label{class_tower_defence_1_1_lair_a9901f9769a8f1a87798f8cffe41fd343}} 
+\index{TowerDefence::Lair@{TowerDefence::Lair}!update@{update}}
+\index{update@{update}!TowerDefence::Lair@{TowerDefence::Lair}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Lair\+::update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update information about lair 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}{Tower\+Defence\+::\+Entity}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Lair.\+hpp\item 
+Lair.\+cpp\end{DoxyCompactItemize}

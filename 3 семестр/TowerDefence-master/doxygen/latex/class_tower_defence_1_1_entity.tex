@@ -1,0 +1,119 @@
+\hypertarget{class_tower_defence_1_1_entity}{}\doxysection{Tower\+Defence\+::Entity Class Reference}
+\label{class_tower_defence_1_1_entity}\index{TowerDefence::Entity@{TowerDefence::Entity}}
+
+
+calss for all entites  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.704718cm]{class_tower_defence_1_1_entity}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_adf27af933e6131b853df00bc14f61492}\label{class_tower_defence_1_1_entity_adf27af933e6131b853df00bc14f61492}} 
+constexpr {\bfseries Entity} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) noexcept
+\item 
+constexpr auto \mbox{\hyperlink{class_tower_defence_1_1_entity_a7d663437f440f6c799e02acfac9ef009}{getX}} () const noexcept
+\begin{DoxyCompactList}\small\item\em get position on OX axis \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_tower_defence_1_1_entity_a033918cdcaab05837a2b2a9d4e11e438}{getY}} () const noexcept
+\begin{DoxyCompactList}\small\item\em get position on OY axis \end{DoxyCompactList}\item 
+constexpr auto \mbox{\hyperlink{class_tower_defence_1_1_entity_ae57d9cb722f3cc000cf5098cfe609e79}{get\+Pos}} () const noexcept
+\begin{DoxyCompactList}\small\item\em position of cell \end{DoxyCompactList}\item 
+constexpr void \mbox{\hyperlink{class_tower_defence_1_1_entity_a8bf461a798a054946527524692b85255}{set\+Pos}} (const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos) noexcept
+\begin{DoxyCompactList}\small\item\em set position of own entity \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}{update}} (const float dt)=0
+\begin{DoxyCompactList}\small\item\em update information about entity \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_a9f53f272fac71a27e4fb94f8b6e9d2b3}\label{class_tower_defence_1_1_entity_a9f53f272fac71a27e4fb94f8b6e9d2b3}} 
+\mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} {\bfseries m\+\_\+pos}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+calss for all entites 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_ae57d9cb722f3cc000cf5098cfe609e79}\label{class_tower_defence_1_1_entity_ae57d9cb722f3cc000cf5098cfe609e79}} 
+\index{TowerDefence::Entity@{TowerDefence::Entity}!getPos@{getPos}}
+\index{getPos@{getPos}!TowerDefence::Entity@{TowerDefence::Entity}}
+\doxysubsubsection{\texorpdfstring{getPos()}{getPos()}}
+{\footnotesize\ttfamily constexpr auto Tower\+Defence\+::\+Entity\+::get\+Pos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+position of cell 
+
+\begin{DoxyReturn}{Returns}
+OX axis and OY axis position of cell 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_a7d663437f440f6c799e02acfac9ef009}\label{class_tower_defence_1_1_entity_a7d663437f440f6c799e02acfac9ef009}} 
+\index{TowerDefence::Entity@{TowerDefence::Entity}!getX@{getX}}
+\index{getX@{getX}!TowerDefence::Entity@{TowerDefence::Entity}}
+\doxysubsubsection{\texorpdfstring{getX()}{getX()}}
+{\footnotesize\ttfamily constexpr auto Tower\+Defence\+::\+Entity\+::getX (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get position on OX axis 
+
+\begin{DoxyReturn}{Returns}
+x position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_a033918cdcaab05837a2b2a9d4e11e438}\label{class_tower_defence_1_1_entity_a033918cdcaab05837a2b2a9d4e11e438}} 
+\index{TowerDefence::Entity@{TowerDefence::Entity}!getY@{getY}}
+\index{getY@{getY}!TowerDefence::Entity@{TowerDefence::Entity}}
+\doxysubsubsection{\texorpdfstring{getY()}{getY()}}
+{\footnotesize\ttfamily constexpr auto Tower\+Defence\+::\+Entity\+::getY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+get position on OY axis 
+
+\begin{DoxyReturn}{Returns}
+y position 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_a8bf461a798a054946527524692b85255}\label{class_tower_defence_1_1_entity_a8bf461a798a054946527524692b85255}} 
+\index{TowerDefence::Entity@{TowerDefence::Entity}!setPos@{setPos}}
+\index{setPos@{setPos}!TowerDefence::Entity@{TowerDefence::Entity}}
+\doxysubsubsection{\texorpdfstring{setPos()}{setPos()}}
+{\footnotesize\ttfamily constexpr void Tower\+Defence\+::\+Entity\+::set\+Pos (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&}]{pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [constexpr]}, {\ttfamily [noexcept]}}
+
+
+
+set position of own entity 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}\label{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}} 
+\index{TowerDefence::Entity@{TowerDefence::Entity}!update@{update}}
+\index{update@{update}!TowerDefence::Entity@{TowerDefence::Entity}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual void Tower\+Defence\+::\+Entity\+::update (\begin{DoxyParamCaption}\item[{const float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+update information about entity 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_tower_defence_1_1_tower_a502347a9bb57ccc3a680d116d57f1871}{Tower\+Defence\+::\+Tower}}, \mbox{\hyperlink{class_tower_defence_1_1_lair_a9901f9769a8f1a87798f8cffe41fd343}{Tower\+Defence\+::\+Lair}}, \mbox{\hyperlink{class_tower_defence_1_1_enemy_af75cc5ba8ce549cb9a2b46e4868ba1eb}{Tower\+Defence\+::\+Enemy}}, and \mbox{\hyperlink{class_tower_defence_1_1_castle_a0768102a9fab0eed0b1494a4b7a704e9}{Tower\+Defence\+::\+Castle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Entity.\+hpp\end{DoxyCompactItemize}

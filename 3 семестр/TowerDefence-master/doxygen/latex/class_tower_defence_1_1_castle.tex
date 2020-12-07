@@ -1,0 +1,121 @@
+\hypertarget{class_tower_defence_1_1_castle}{}\doxysection{Tower\+Defence\+::Castle Class Reference}
+\label{class_tower_defence_1_1_castle}\index{TowerDefence::Castle@{TowerDefence::Castle}}
+
+
+class for castle  
+
+
+
+
+{\ttfamily \#include $<$Castle.\+hpp$>$}
+
+Inheritance diagram for Tower\+Defence\+::Castle\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_tower_defence_1_1_castle}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_ab04f789b6bf82d95f36c12087f59d251}\label{class_tower_defence_1_1_castle_ab04f789b6bf82d95f36c12087f59d251}} 
+{\bfseries Castle} (const int start\+Money, const \mbox{\hyperlink{struct_tower_defence_1_1_pos}{PosF}} \&pos)
+\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_castle_a6fc088801f9f5345e556a7c96aa6a68a}{can\+Upgrade}} () const override
+\begin{DoxyCompactList}\small\item\em can castle upgrade? \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_tower_defence_1_1_castle_a009f6ebafc7a1b74e3ca6bcc62be8469}{upgrade}} () noexcept override
+\begin{DoxyCompactList}\small\item\em has castle upgrated? \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_castle_a0768102a9fab0eed0b1494a4b7a704e9}{update}} (const float dt) override
+\begin{DoxyCompactList}\small\item\em update information about castle \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a2bf6f7e23ce4442687f049022e98225f}\label{class_tower_defence_1_1_castle_a2bf6f7e23ce4442687f049022e98225f}} 
+int {\bfseries get\+Upgrade\+Price} () const noexcept override
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a786511c72436beb09f5d403bd4a819a1}\label{class_tower_defence_1_1_castle_a786511c72436beb09f5d403bd4a819a1}} 
+int {\bfseries get\+Max\+Health} () const noexcept override
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a390a90011afdad1c4b45ed03c581dd9c}\label{class_tower_defence_1_1_castle_a390a90011afdad1c4b45ed03c581dd9c}} 
+constexpr auto {\bfseries get\+Money} () const noexcept
+\item 
+void \mbox{\hyperlink{class_tower_defence_1_1_castle_a32ef9f28d9967d7db9964ac6fe4d5cf7}{withdraw}} (const int amount)
+\item 
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a7aa6e635b1aa53d0a3180e0a035d4d0a}\label{class_tower_defence_1_1_castle_a7aa6e635b1aa53d0a3180e0a035d4d0a}} 
+bool {\bfseries has\+Money} (const int amount) const noexcept
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+class for castle 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a6fc088801f9f5345e556a7c96aa6a68a}\label{class_tower_defence_1_1_castle_a6fc088801f9f5345e556a7c96aa6a68a}} 
+\index{TowerDefence::Castle@{TowerDefence::Castle}!canUpgrade@{canUpgrade}}
+\index{canUpgrade@{canUpgrade}!TowerDefence::Castle@{TowerDefence::Castle}}
+\doxysubsubsection{\texorpdfstring{canUpgrade()}{canUpgrade()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Castle\+::can\+Upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+can castle upgrade? 
+
+\begin{DoxyReturn}{Returns}
+bool (can upgrade or no) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_a871a10233c7606f7d07e9921a5d35009}{Tower\+Defence\+::\+Upgradable\+Building}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a0768102a9fab0eed0b1494a4b7a704e9}\label{class_tower_defence_1_1_castle_a0768102a9fab0eed0b1494a4b7a704e9}} 
+\index{TowerDefence::Castle@{TowerDefence::Castle}!update@{update}}
+\index{update@{update}!TowerDefence::Castle@{TowerDefence::Castle}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Castle\+::update (\begin{DoxyParamCaption}\item[{const float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+update information about castle 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_entity_a72e879f1ab7c3e50bfdfd768dd797c1f}{Tower\+Defence\+::\+Entity}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a009f6ebafc7a1b74e3ca6bcc62be8469}\label{class_tower_defence_1_1_castle_a009f6ebafc7a1b74e3ca6bcc62be8469}} 
+\index{TowerDefence::Castle@{TowerDefence::Castle}!upgrade@{upgrade}}
+\index{upgrade@{upgrade}!TowerDefence::Castle@{TowerDefence::Castle}}
+\doxysubsubsection{\texorpdfstring{upgrade()}{upgrade()}}
+{\footnotesize\ttfamily bool Tower\+Defence\+::\+Castle\+::upgrade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [noexcept]}}
+
+
+
+has castle upgrated? 
+
+\begin{DoxyReturn}{Returns}
+bool (upgrade or no) 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_tower_defence_1_1_upgradable_building_af5f1f304058b249c32004ce278443d8c}{Tower\+Defence\+::\+Upgradable\+Building}}.
+
+\mbox{\Hypertarget{class_tower_defence_1_1_castle_a32ef9f28d9967d7db9964ac6fe4d5cf7}\label{class_tower_defence_1_1_castle_a32ef9f28d9967d7db9964ac6fe4d5cf7}} 
+\index{TowerDefence::Castle@{TowerDefence::Castle}!withdraw@{withdraw}}
+\index{withdraw@{withdraw}!TowerDefence::Castle@{TowerDefence::Castle}}
+\doxysubsubsection{\texorpdfstring{withdraw()}{withdraw()}}
+{\footnotesize\ttfamily void Tower\+Defence\+::\+Castle\+::withdraw (\begin{DoxyParamCaption}\item[{const int}]{amount }\end{DoxyParamCaption})}
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error(\char`\"{}\+Not} & enought money"{}) \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Castle.\+hpp\item 
+Castle.\+cpp\end{DoxyCompactItemize}
